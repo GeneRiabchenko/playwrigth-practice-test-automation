@@ -1,4 +1,4 @@
-package com.playwright.locators;
+package com.playwright.toolshop.contact.locators;
 
 public class ContactPageLocators {
 
