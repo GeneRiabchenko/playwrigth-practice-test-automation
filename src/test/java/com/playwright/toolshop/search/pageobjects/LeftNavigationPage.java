@@ -2,15 +2,12 @@ package com.playwright.toolshop.search.pageobjects;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
-import com.microsoft.playwright.options.WaitForSelectorState;
-import com.playwright.toolshop.BasePage;
+import com.playwright.toolshop.product.pageobjects.MainPage;
 
-import static com.playwright.toolshop.product.locators.MainPageLocators.CARD_IMAGES;
-import static com.playwright.toolshop.product.locators.MainPageLocators.SEARCH_FINISHED_STATE;
 import static com.playwright.toolshop.resources.Resources.PRODUCTS_REQUEST_URL;
 import static com.playwright.toolshop.search.locators.LeftNavigationLocators.*;
 
-public class LeftNavigationPage extends BasePage {
+public class LeftNavigationPage extends MainPage {
     private final Page page;
 
     public LeftNavigationPage(Page page) {
@@ -40,13 +37,13 @@ public class LeftNavigationPage extends BasePage {
         page.getByTestId(SEARCH_INPUT).fill(searchString);
         page.getByTestId(SEARCH_BUTTON).click();
         if (searchString != null && !searchString.isEmpty()) {
-            page.waitForSelector(SEARCH_FINISHED_STATE);
+            page.waitForCondition(SEARCH_FINISHED_STATE::isVisible);
         }
     }
 
     public void selectPowerToolsCategory(){
         page.getByRole(AriaRole.MENUBAR).getByText("Categories").click();
         page.getByRole(AriaRole.MENUBAR).getByText("Power Tools").click();
-        page.waitForSelector(CARD_IMAGES, new Page.WaitForSelectorOptions().setState(WaitForSelectorState.VISIBLE));
+        page.waitForCondition(CARD_IMAGES.first()::isVisible);
     }
 }

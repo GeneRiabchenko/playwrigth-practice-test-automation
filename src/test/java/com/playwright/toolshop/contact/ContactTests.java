@@ -20,10 +20,6 @@ public class ContactTests extends BaseTest {
     @BeforeEach
     public void setUp(Page page){
         contactPage = new ContactPage(page);
-    }
-
-    @BeforeEach
-    public void goToContactPage(){
         contactPage.goToContactPage();
     }
 
