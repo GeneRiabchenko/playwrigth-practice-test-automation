@@ -3,41 +3,26 @@ package com.playwright.toolshop.api;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.microsoft.playwright.APIRequest;
-import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
-import com.playwright.toolshop.BaseTest;
+import com.playwright.toolshop.BaseApiTest;
 import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.product.pageobjects.MainPage;
 import com.playwright.toolshop.search.pageobjects.LeftNavigationPage;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.HashMap;
 import java.util.stream.Stream;
 
+
 @UsePlaywright(HeadlessChromeOptions.class)
-public class APITests extends BaseTest{
-    private static APIRequestContext requestContext;
+public class ProductAPITests extends BaseApiTest {
     MainPage mainPage;
     LeftNavigationPage navigationPage;
-
-    @BeforeAll
-    public static void setupRequestContext() {
-        requestContext = playwright.request().newContext(
-                new APIRequest.NewContextOptions()
-                        .setBaseURL("https://api.practicesoftwaretesting.com/")
-                        .setExtraHTTPHeaders(new HashMap<>() {{
-                            put("Accept", "application/json");
-                        }})
-        );
-    }
 
     @BeforeEach
     void openHomePage(){

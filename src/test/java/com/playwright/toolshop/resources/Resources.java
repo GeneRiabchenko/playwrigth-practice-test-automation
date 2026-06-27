@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Resources {
     public static String MAIN_URL = "https://practicesoftwaretesting.com/";
+    public static String BASE_API_URL = "https://api.practicesoftwaretesting.com/";
     public static String CONTACTS_URL = String.format("%scontact", MAIN_URL);
     public static String SIGN_IN_URL = String.format("%sauth/login", MAIN_URL);
     public static String SAMPLE_FILE_URI = "C:/Users/Jeka/IdeaProjects/Playwright/src/test/java/com/playwright/toolshop/resources/data/sample-data.txt";
