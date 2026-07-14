@@ -1,4 +1,4 @@
-package com.playwright.toolshop.contact.utils;
+package com.playwright.toolshop.utils;
 
 import net.datafaker.Faker;
 
