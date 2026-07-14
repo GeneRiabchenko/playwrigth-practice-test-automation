@@ -1,9 +1,11 @@
-package com.playwright.toolshop.contact.utils;
+package com.playwright.toolshop.utils;
 
 import net.datafaker.Faker;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+import static com.playwright.toolshop.resources.Resources.USER_PASSWORD;
 
 /*
 {
@@ -49,7 +51,7 @@ public record User(
                 address,
                 fake.phoneNumber().cellPhone(),
                 formattedDate,
-                "Souce1234555!",
+                USER_PASSWORD,
                 fake.internet().emailAddress()
         );
     }
