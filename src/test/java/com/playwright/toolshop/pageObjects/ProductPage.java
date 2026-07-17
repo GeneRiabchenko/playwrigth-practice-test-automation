@@ -1,9 +1,8 @@
-package com.playwright.toolshop.product.pageobjects;
+package com.playwright.toolshop.pageObjects;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
-import com.playwright.toolshop.BasePage;
 
 
 @UsePlaywright

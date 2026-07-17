@@ -1,11 +1,11 @@
-package com.playwright.toolshop.search;
+package com.playwright.toolshop.tests.search;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
-import com.playwright.toolshop.BaseTest;
 import com.playwright.toolshop.HeadlessChromeOptions;
-import com.playwright.toolshop.product.pageobjects.MainPage;
-import com.playwright.toolshop.search.pageobjects.LeftNavigationPage;
+import com.playwright.toolshop.pageObjects.LeftNavigationPage;
+import com.playwright.toolshop.pageObjects.MainPage;
+import com.playwright.toolshop.tests.BaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

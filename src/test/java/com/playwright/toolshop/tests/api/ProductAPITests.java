@@ -1,4 +1,4 @@
-package com.playwright.toolshop.api;
+package com.playwright.toolshop.tests.api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -6,23 +6,30 @@ import com.google.gson.JsonObject;
 import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
-import com.playwright.toolshop.BaseApiTest;
 import com.playwright.toolshop.HeadlessChromeOptions;
-import com.playwright.toolshop.product.pageobjects.MainPage;
-import com.playwright.toolshop.search.pageobjects.LeftNavigationPage;
-import org.junit.jupiter.api.Assertions;
+import com.playwright.toolshop.pageObjects.LeftNavigationPage;
+import com.playwright.toolshop.pageObjects.MainPage;
+import com.playwright.toolshop.tests.BaseApiTest;
+import com.playwright.toolshop.utils.MockAPI;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
+
+import static com.playwright.toolshop.resources.Resources.PRODUCTS_REQUEST_URL;
+import static com.playwright.toolshop.resources.data.mocks.ProductsMock.PRODUCTS_SORTED_A_Z;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @UsePlaywright(HeadlessChromeOptions.class)
 public class ProductAPITests extends BaseApiTest {
     MainPage mainPage;
     LeftNavigationPage navigationPage;
+    MockAPI mockAPI;
 
     @BeforeEach
     void openHomePage(){
@@ -33,6 +40,7 @@ public class ProductAPITests extends BaseApiTest {
     void setUp(Page page){
         mainPage = new MainPage(page);
         navigationPage = new LeftNavigationPage(page);
+        mockAPI = new MockAPI(page);
     }
 
     @DisplayName("Checking price and name in the API")
@@ -43,13 +51,21 @@ public class ProductAPITests extends BaseApiTest {
         mainPage.isFilteredProductByNameAndPriceVisible(product.name, product.price, true);
     }
 
+    @Test
+    @DisplayName("Mock product request")
+    void mockedResponseSortedAZ() {
+        mockAPI.mockRequest(PRODUCTS_REQUEST_URL, PRODUCTS_SORTED_A_Z, 200);
+        navigationPage.selectSortBy("Name (A - Z)");
+        Assertions.assertThat(mainPage.countSearchedResults()).isEqualTo(9);
+    }
+
     public record Product(String name, Double price) {
     }
 
     static Stream<Product> products() {
         Stream<Product> allProducts = Stream.empty();
         APIResponse response = requestContext.get("/products?page=1");
-        Assertions.assertEquals(200, response.status());
+        assertEquals(200, response.status());
 
         int pageCount = new Gson().fromJson(response.text(), JsonObject.class).getAsJsonPrimitive("last_page").getAsInt();
 
