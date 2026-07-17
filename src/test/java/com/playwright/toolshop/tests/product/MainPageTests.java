@@ -111,7 +111,7 @@ public class MainPageTests extends BaseTest {
     void waitForAPIResponse(Page page){
 
         //https://api.practicesoftwaretesting.com/products?page=0&sort=price,desc&between=price,1,100&is_rental=false
-        page.waitForResponse("**/products?page=0&sort=price**", () -> page.getByTestId("sort").selectOption("Price (High - Low)"));
+        page.waitForResponse(PRODUCTS_REQUEST_URL, () -> page.getByTestId("sort").selectOption("Price (High - Low)"));
 
         var productPrices = page.getByTestId("product-price").allInnerTexts()
                 .stream()

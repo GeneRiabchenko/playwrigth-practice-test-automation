@@ -50,7 +50,7 @@ public class SearchTests extends BaseTest {
 
     @DisplayName("Cross button should clear search results")
     @Test
-    void crossButtonClearsSearchResult(){
+    void crossButtonClearsSearchResult() {
         leftNavigationPage.search("pliers");
         mainPage.checkProductNames(EXPECTED_PRODUCTS_PLIERS);
         leftNavigationPage.clickCrossButton();

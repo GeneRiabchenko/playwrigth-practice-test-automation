@@ -1,10 +1,10 @@
-package com.playwright.toolshop.login;
+package com.playwright.toolshop.tests.login;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
-import com.playwright.toolshop.BaseTest;
 import com.playwright.toolshop.HeadlessChromeOptions;
-import com.playwright.toolshop.login.pageobjects.LoginPage;
+import com.playwright.toolshop.pageObjects.LoginPage;
+import com.playwright.toolshop.tests.BaseTest;
 import com.playwright.toolshop.utils.User;
 import com.playwright.toolshop.utils.UserAPIClient;
 import org.assertj.core.api.Assertions;
@@ -27,7 +27,7 @@ public class LoginPageTests extends BaseTest {
         User randomUser = User.randomUser();
 
         loginPage.loginAs(randomUser);
-        Assertions.assertThat(loginPage.loginError()).isEqualTo("Invalid user or password.");
+        Assertions.assertThat(loginPage.loginError()).isEqualTo("Invalid user or password");
     }
 
     @Test

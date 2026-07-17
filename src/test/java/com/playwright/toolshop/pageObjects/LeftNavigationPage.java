@@ -4,7 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 
-import static com.playwright.toolshop.resources.Resources.PRODUCTS_REQUEST_URL_WITH_PARAMETERS;
+import static com.playwright.toolshop.resources.Resources.PRODUCTS_REQUEST_URL;
 
 public class LeftNavigationPage extends MainPage {
     private final Page page;
@@ -27,7 +27,7 @@ public class LeftNavigationPage extends MainPage {
     }
 
     public void clickCrossButton(){
-        page.waitForResponse(PRODUCTS_REQUEST_URL_WITH_PARAMETERS, CROSS_BUTTON::click);
+        page.waitForResponse(PRODUCTS_REQUEST_URL, CROSS_BUTTON::click);
     }
 
     public void fillSearchField(String searchString){
