@@ -31,4 +31,6 @@ public class Resources {
             "Thor Hammer"
     );
     public static List<String> EXPECTED_OUT_OF_STOCK_PRODUCTS = List.of("Long Nose Pliers");
+
+    public static String USER_PASSWORD = "Souce1234555!";
 }

@@ -8,8 +8,8 @@ import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.RequestOptions;
-import com.playwright.toolshop.contact.utils.Address;
-import com.playwright.toolshop.contact.utils.User;
+import com.playwright.toolshop.utils.Address;
+import com.playwright.toolshop.utils.User;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -47,7 +47,7 @@ public class ContactAPITest {
         User createdUser = gson.fromJson(responseBody, User.class);
         JsonObject responseObject = gson.fromJson(responseBody, JsonObject.class);
 
-        SoftAssertions.assertSoftly(softly ->{
+        SoftAssertions.assertSoftly(softly -> {
             softly.assertThat(response.status())
                     .as("Registration should return 201 code")
                     .isEqualTo(201);

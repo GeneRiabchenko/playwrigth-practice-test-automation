@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.util.HashMap;
 
+import static com.playwright.toolshop.resources.Resources.BASE_API_URL;
 import static com.playwright.toolshop.resources.Resources.BROWSER_LAUNCH_OPTION;
 
 public abstract class BaseTest {
@@ -32,7 +33,7 @@ public abstract class BaseTest {
     public static void setupRequestContext() {
         requestContext = playwright.request().newContext(
                 new APIRequest.NewContextOptions()
-                        .setBaseURL("https://api.practicesoftwaretesting.com/")
+                        .setBaseURL(BASE_API_URL)
                         .setExtraHTTPHeaders(new HashMap<>() {{
                             put("Accept", "application/json");
                         }})
