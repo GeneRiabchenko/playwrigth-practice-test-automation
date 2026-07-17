@@ -1,4 +1,4 @@
-package com.playwright.toolshop.contact.pageobjects;
+package com.playwright.toolshop.pageObjects;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;

@@ -1,41 +1,48 @@
-package com.playwright.toolshop.search.pageobjects;
+package com.playwright.toolshop.pageObjects;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
-import com.playwright.toolshop.product.pageobjects.MainPage;
 
 import static com.playwright.toolshop.resources.Resources.PRODUCTS_REQUEST_URL;
-import static com.playwright.toolshop.search.locators.LeftNavigationLocators.*;
 
 public class LeftNavigationPage extends MainPage {
     private final Page page;
+    private final Locator SORT_BY_DROPDOWN;
+    private final Locator SEARCH_INPUT;
+    private final Locator SEARCH_BUTTON;
+    private final Locator CROSS_BUTTON;
 
     public LeftNavigationPage(Page page) {
         super(page);
         this.page = page;
+        this.SORT_BY_DROPDOWN = page.getByTestId("sort");
+        this.SEARCH_INPUT = page.getByTestId("search-query");
+        this.SEARCH_BUTTON = page.getByTestId("search-submit");
+        this.CROSS_BUTTON = page.getByTestId("search-reset");
     }
 
     public void clickSearchButton(){
-        page.getByTestId(SEARCH_BUTTON).click();
+        SEARCH_BUTTON.click();
     }
 
     public void clickCrossButton(){
-        page.waitForResponse(PRODUCTS_REQUEST_URL, () -> page.getByTestId(CROSS_BUTTON).click());
+        page.waitForResponse(PRODUCTS_REQUEST_URL, CROSS_BUTTON::click);
     }
 
     public void fillSearchField(String searchString){
-        page.getByTestId(SEARCH_INPUT).clear();
-        page.getByTestId(SEARCH_INPUT).fill(searchString);
+        SEARCH_INPUT.clear();
+        SEARCH_INPUT.fill(searchString);
     }
 
     public void clearSearchField(){
-        page.getByTestId(SEARCH_INPUT).clear();
+        SEARCH_INPUT.clear();
     }
 
     public void search(String searchString){
-        page.getByTestId(SEARCH_INPUT).clear();
-        page.getByTestId(SEARCH_INPUT).fill(searchString);
-        page.getByTestId(SEARCH_BUTTON).click();
+        SEARCH_INPUT.clear();
+        SEARCH_INPUT.fill(searchString);
+        SEARCH_BUTTON.click();
         if (searchString != null && !searchString.isEmpty()) {
             page.waitForCondition(SEARCH_FINISHED_STATE::isVisible);
         }
@@ -45,5 +52,9 @@ public class LeftNavigationPage extends MainPage {
         page.getByRole(AriaRole.MENUBAR).getByText("Categories").click();
         page.getByRole(AriaRole.MENUBAR).getByText("Power Tools").click();
         page.waitForCondition(CARD_IMAGES.first()::isVisible);
+    }
+
+    public void selectSortBy(String sortBy){
+        SORT_BY_DROPDOWN.selectOption(sortBy);
     }
 }

@@ -1,10 +1,9 @@
-package com.playwright.toolshop.product.pageobjects;
+package com.playwright.toolshop.pageObjects;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.AriaRole;
-import com.playwright.toolshop.BasePage;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
@@ -66,7 +65,6 @@ public class MainPage extends BasePage {
     public int countSearchedResults(){
         return CARD_LOCATOR.count();
     }
-
 
     public Locator getBadgeByText(String textElement){
         return BADGE_LOCATOR.getByText(textElement);

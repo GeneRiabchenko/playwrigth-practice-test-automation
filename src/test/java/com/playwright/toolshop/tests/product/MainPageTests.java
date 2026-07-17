@@ -1,13 +1,13 @@
-package com.playwright.toolshop.product;
+package com.playwright.toolshop.tests.product;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.junit.UsePlaywright;
-import com.playwright.toolshop.BaseTest;
 import com.playwright.toolshop.HeadlessChromeOptions;
-import com.playwright.toolshop.product.pageobjects.MainPage;
-import com.playwright.toolshop.product.pageobjects.ProductPage;
-import com.playwright.toolshop.search.pageobjects.LeftNavigationPage;
+import com.playwright.toolshop.pageObjects.LeftNavigationPage;
+import com.playwright.toolshop.pageObjects.MainPage;
+import com.playwright.toolshop.pageObjects.ProductPage;
+import com.playwright.toolshop.tests.BaseTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -111,7 +111,7 @@ public class MainPageTests extends BaseTest {
     void waitForAPIResponse(Page page){
 
         //https://api.practicesoftwaretesting.com/products?page=0&sort=price,desc&between=price,1,100&is_rental=false
-        page.waitForResponse("**/products?page=0&sort=price**", () -> page.getByTestId("sort").selectOption("Price (High - Low)"));
+        page.waitForResponse(PRODUCTS_REQUEST_URL, () -> page.getByTestId("sort").selectOption("Price (High - Low)"));
 
         var productPrices = page.getByTestId("product-price").allInnerTexts()
                 .stream()

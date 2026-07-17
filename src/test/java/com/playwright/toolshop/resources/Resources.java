@@ -9,7 +9,8 @@ public class Resources {
     public static String SIGN_IN_URL = String.format("%sauth/login", MAIN_URL);
     public static String SAMPLE_FILE_URI = "C:/Users/Jeka/IdeaProjects/Playwright/src/test/java/com/playwright/toolshop/resources/data/sample-data.txt";
 
-    public static String PRODUCTS_REQUEST_URL = "**/products?**";
+    public static String PRODUCTS_REQUEST_URL_WITH_PARAMETERS = "**/products?**";
+    public static String PRODUCTS_REQUEST_URL = "**/products";
 
     public static List<String> BROWSER_LAUNCH_OPTION = Arrays.asList(
             "--no-sandbox",

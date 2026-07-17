@@ -1,4 +1,4 @@
-package com.playwright.toolshop.contact;
+package com.playwright.toolshop.tests.contact;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
