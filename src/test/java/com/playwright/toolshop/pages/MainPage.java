@@ -1,4 +1,4 @@
-package com.playwright.toolshop.pageObjects;
+package com.playwright.toolshop.pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
 
+import static com.playwright.toolshop.resources.Resources.MAIN_URL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @UsePlaywright
@@ -33,7 +34,6 @@ public class MainPage extends BasePage {
     public MainPage(Page page) {
         super(page);
         this.page = page;
-
         this.SEARCH_FINISHED_STATE = page.locator("[data-test=search_completed]");
         this.SEARCH_FOR_LABEL = page.getByTestId("search-caption");
         this.CARD_LOCATOR = page.locator(".card");
@@ -49,6 +49,11 @@ public class MainPage extends BasePage {
         this.SEARCH_RESULT_COUNT = page.getByTestId("search-result-count");
         this.NO_RESULT_MESSAGE = page.getByTestId("no-results");
         this.PRODUCT_CONTAINER = page.locator(".container");
+    }
+
+    @Override
+    protected String getUrl() {
+        return MAIN_URL;
     }
 
     public List<String> getOutOfStockItems(){
@@ -121,6 +126,10 @@ public class MainPage extends BasePage {
                         .setHasText(price.toString())
         );
         assertEquals(isVisible, productCard.isVisible());
+    }
+
+    public void openProductByName(String name){
+        PRODUCT_NAME.getByText(name, new Locator.GetByTextOptions().setExact(true)).click();
     }
 }
 

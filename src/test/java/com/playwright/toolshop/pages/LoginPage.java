@@ -1,4 +1,4 @@
-package com.playwright.toolshop.pageObjects;
+package com.playwright.toolshop.pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
@@ -8,7 +8,7 @@ import com.playwright.toolshop.utils.User;
 import static com.playwright.toolshop.resources.Resources.SIGN_IN_URL;
 
 @UsePlaywright
-public class LoginPage {
+public class LoginPage extends BasePage {
     private final Page page;
 
     private final Locator EMAIl_ADDRESS_FIELD;
@@ -18,12 +18,18 @@ public class LoginPage {
     private final Locator PAGE_TITLE;
 
     public LoginPage(Page page) {
+        super(page);
         this.page = page;
         this.EMAIl_ADDRESS_FIELD = page.getByTestId("email");
         this.PASSWORD_FIELD = page.getByTestId("password");
         this.LOGIN_BUTTON = page.getByTestId("login-submit");
         this.LOGIN_ERROR_MESSAGE = page.getByTestId("login-error");
         this.PAGE_TITLE = page.getByTestId("page-title");
+    }
+
+    @Override
+    protected String getUrl() {
+        return SIGN_IN_URL;
     }
 
     public void open(){
