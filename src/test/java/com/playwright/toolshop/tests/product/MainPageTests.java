@@ -4,9 +4,9 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
-import com.playwright.toolshop.pageObjects.LeftNavigationPage;
-import com.playwright.toolshop.pageObjects.MainPage;
-import com.playwright.toolshop.pageObjects.ProductPage;
+import com.playwright.toolshop.pages.LeftNavigationPage;
+import com.playwright.toolshop.pages.MainPage;
+import com.playwright.toolshop.pages.ProductPage;
 import com.playwright.toolshop.tests.BaseTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,7 +25,7 @@ public class MainPageTests extends BaseTest {
 
     @BeforeEach
     void openHomePage(){
-        mainPage.goToMainPage();
+        mainPage.navigate();
     }
 
     @BeforeEach
@@ -95,7 +95,7 @@ public class MainPageTests extends BaseTest {
     @Test
     void shouldDisplayToasterMessage(){
         mainPage.clickElementByText("Bolt Cutters");
-        productPage.addToTheCart();
+        productPage.addToCart();
         mainPage.waitForTheToasterMessage("Product added to shopping cart.");
         mainPage.waitForTheToasterMessageToDisappear();
     }
@@ -103,7 +103,7 @@ public class MainPageTests extends BaseTest {
     @Test
     void shouldUpdateCartItemCount(){
         mainPage.clickElementByText("Bolt Cutters");
-        productPage.addToTheCart();
+        productPage.addToCart();
         mainPage.checkCartItemCount("1");
     }
 

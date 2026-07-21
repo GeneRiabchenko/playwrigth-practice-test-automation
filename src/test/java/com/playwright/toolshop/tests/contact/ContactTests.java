@@ -3,7 +3,7 @@ package com.playwright.toolshop.tests.contact;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
-import com.playwright.toolshop.pageObjects.ContactPage;
+import com.playwright.toolshop.pages.ContactPage;
 import com.playwright.toolshop.tests.BaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

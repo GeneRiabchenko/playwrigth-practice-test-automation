@@ -7,8 +7,8 @@ import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
-import com.playwright.toolshop.pageObjects.LeftNavigationPage;
-import com.playwright.toolshop.pageObjects.MainPage;
+import com.playwright.toolshop.pages.LeftNavigationPage;
+import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.tests.BaseApiTest;
 import com.playwright.toolshop.utils.MockAPI;
 import org.assertj.core.api.Assertions;
@@ -33,7 +33,7 @@ public class ProductAPITests extends BaseApiTest {
 
     @BeforeEach
     void openHomePage(){
-        mainPage.goToMainPage();
+        mainPage.navigate();
     }
 
     @BeforeEach
