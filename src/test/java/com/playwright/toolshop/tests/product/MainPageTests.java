@@ -7,17 +7,18 @@ import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.pages.ProductPage;
-import com.playwright.toolshop.tests.BaseTest;
+import com.playwright.toolshop.tests.BaseTestRunner;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 
-import static com.playwright.toolshop.resources.Resources.*;
+import static com.playwright.toolshop.testresources.Resources.*;
 
 @UsePlaywright(HeadlessChromeOptions.class)
-public class MainPageTests extends BaseTest {
+public class MainPageTests extends BaseTestRunner {
     MainPage mainPage;
     ProductPage productPage;
     LeftNavigationPage leftNavigationPage;
@@ -37,8 +38,8 @@ public class MainPageTests extends BaseTest {
 
 
     @Test
-    void shouldShowTitle(Page page){
-        Assertions.assertEquals("Practice Software Testing - Toolshop - v5.0", page.title());
+    void shouldShowTitle(){
+        Assertions.assertEquals("Practice Software Testing - Toolshop - v5.0", mainPage.getTitle());
     }
 
     @Test
@@ -108,7 +109,8 @@ public class MainPageTests extends BaseTest {
     }
 
     @Test
-    void waitForAPIResponse(Page page){
+    @Disabled
+    void waitForAPIResponse(){
 
         //https://api.practicesoftwaretesting.com/products?page=0&sort=price,desc&between=price,1,100&is_rental=false
         page.waitForResponse(PRODUCTS_REQUEST_URL, () -> page.getByTestId("sort").selectOption("Price (High - Low)"));

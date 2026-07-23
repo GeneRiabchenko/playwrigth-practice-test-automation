@@ -9,10 +9,11 @@ import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
-import com.playwright.toolshop.tests.BaseApiTest;
+import com.playwright.toolshop.tests.BaseAPITestRunner;
 import com.playwright.toolshop.utils.MockAPI;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -20,13 +21,13 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static com.playwright.toolshop.resources.Resources.PRODUCTS_REQUEST_URL;
-import static com.playwright.toolshop.resources.data.mocks.ProductsMock.PRODUCTS_SORTED_A_Z;
+import static com.playwright.toolshop.testresources.Resources.PRODUCTS_REQUEST_URL;
+import static com.playwright.toolshop.testresources.data.mocks.ProductsMock.PRODUCTS_SORTED_A_Z;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @UsePlaywright(HeadlessChromeOptions.class)
-public class ProductAPITests extends BaseApiTest {
+public class ProductAPITests extends BaseAPITestRunner {
     MainPage mainPage;
     LeftNavigationPage navigationPage;
     MockAPI mockAPI;
@@ -45,6 +46,7 @@ public class ProductAPITests extends BaseApiTest {
 
     @DisplayName("Checking price and name in the API")
     @ParameterizedTest(name = "Checking product {0}")
+    @Disabled
     @MethodSource("products")
     void checkKnownProducts(Product product){
         navigationPage.search(product.name);

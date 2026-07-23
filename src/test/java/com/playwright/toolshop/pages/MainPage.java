@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
 
-import static com.playwright.toolshop.resources.Resources.MAIN_URL;
+import static com.playwright.toolshop.testresources.Resources.MAIN_URL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @UsePlaywright
@@ -130,6 +130,11 @@ public class MainPage extends BasePage {
 
     public void openProductByName(String name){
         PRODUCT_NAME.getByText(name, new Locator.GetByTextOptions().setExact(true)).click();
+    }
+
+    public String getTitle(){
+        PRODUCT_CONTAINER.first().waitFor();
+        return page.title();
     }
 }
 

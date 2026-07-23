@@ -4,17 +4,17 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.pages.ContactPage;
-import com.playwright.toolshop.tests.BaseTest;
+import com.playwright.toolshop.tests.BaseTestRunner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static com.playwright.toolshop.resources.Resources.SAMPLE_FILE_URI;
+import static com.playwright.toolshop.testresources.Resources.SAMPLE_FILE_URI;
 
 @UsePlaywright(HeadlessChromeOptions.class)
-public class ContactTests extends BaseTest {
+public class ContactTests extends BaseTestRunner {
     ContactPage contactPage;
 
     @BeforeEach

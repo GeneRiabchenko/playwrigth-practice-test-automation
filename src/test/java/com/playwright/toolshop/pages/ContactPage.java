@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 
 import java.nio.file.Path;
 
-import static com.playwright.toolshop.resources.Resources.CONTACTS_URL;
+import static com.playwright.toolshop.testresources.Resources.CONTACTS_URL;
 
 @UsePlaywright
 public class ContactPage {

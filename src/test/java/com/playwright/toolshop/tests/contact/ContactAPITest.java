@@ -15,7 +15,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.playwright.toolshop.resources.Resources.BASE_API_URL;
+import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
 
 
 @UsePlaywright

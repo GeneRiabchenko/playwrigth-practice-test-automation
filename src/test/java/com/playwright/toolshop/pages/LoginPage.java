@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.utils.User;
 
-import static com.playwright.toolshop.resources.Resources.SIGN_IN_URL;
+import static com.playwright.toolshop.testresources.Resources.SIGN_IN_URL;
 
 @UsePlaywright
 public class LoginPage extends BasePage {
