@@ -5,17 +5,17 @@ import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
-import com.playwright.toolshop.tests.BaseTest;
+import com.playwright.toolshop.tests.BaseTestRunner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.playwright.toolshop.resources.Resources.EXPECTED_PRODUCTS_MAIN_PAGE;
-import static com.playwright.toolshop.resources.Resources.EXPECTED_PRODUCTS_PLIERS;
+import static com.playwright.toolshop.testresources.Resources.EXPECTED_PRODUCTS_MAIN_PAGE;
+import static com.playwright.toolshop.testresources.Resources.EXPECTED_PRODUCTS_PLIERS;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @UsePlaywright(HeadlessChromeOptions.class)
-public class SearchTests extends BaseTest {
+public class SearchTests extends BaseTestRunner {
     MainPage mainPage;
     LeftNavigationPage leftNavigationPage;
 

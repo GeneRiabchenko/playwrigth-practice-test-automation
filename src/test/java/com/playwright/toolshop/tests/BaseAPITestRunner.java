@@ -8,10 +8,10 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.util.HashMap;
 
-import static com.playwright.toolshop.resources.Resources.BASE_API_URL;
-import static com.playwright.toolshop.resources.Resources.BROWSER_LAUNCH_OPTION;
+import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
+import static com.playwright.toolshop.testresources.Resources.BROWSER_LAUNCH_OPTION;
 
-public class BaseApiTest {
+public class BaseAPITestRunner {
     protected static Playwright playwright;
     protected static Browser browser;
     protected static BrowserContext browserContext;

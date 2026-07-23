@@ -4,7 +4,7 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.junit.Options;
 import com.microsoft.playwright.junit.OptionsFactory;
 
-import static com.playwright.toolshop.resources.Resources.BROWSER_LAUNCH_OPTION;
+import static com.playwright.toolshop.testresources.Resources.BROWSER_LAUNCH_OPTION;
 
 public class HeadlessChromeOptions implements OptionsFactory {
 

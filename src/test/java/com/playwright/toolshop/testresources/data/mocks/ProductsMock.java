@@ -1,4 +1,4 @@
-package com.playwright.toolshop.resources.data.mocks;
+package com.playwright.toolshop.testresources.data.mocks;
 
 public class ProductsMock {
     public static final String PRODUCTS_SORTED_A_Z = "{\n" +

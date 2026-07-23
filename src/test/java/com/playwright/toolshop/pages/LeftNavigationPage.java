@@ -4,7 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 
-import static com.playwright.toolshop.resources.Resources.PRODUCTS_REQUEST_URL;
+import static com.playwright.toolshop.testresources.Resources.PRODUCTS_REQUEST_URL;
 
 public class LeftNavigationPage extends MainPage {
     private final Page page;

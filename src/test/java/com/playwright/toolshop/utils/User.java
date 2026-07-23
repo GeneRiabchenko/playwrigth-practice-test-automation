@@ -5,7 +5,7 @@ import net.datafaker.Faker;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static com.playwright.toolshop.resources.Resources.USER_PASSWORD;
+import static com.playwright.toolshop.testresources.Resources.USER_PASSWORD;
 
 /*
 {

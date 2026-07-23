@@ -5,14 +5,14 @@ import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.pages.ProductPage;
-import com.playwright.toolshop.tests.BaseTest;
+import com.playwright.toolshop.tests.BaseTestRunner;
 import com.playwright.toolshop.utils.enums.Specs;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 @UsePlaywright(HeadlessChromeOptions.class)
-public class ProductPageTests extends BaseTest {
+public class ProductPageTests extends BaseTestRunner {
     MainPage mainPage;
     ProductPage productPage;
 

@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.utils.enums.Specs;
 
-import static com.playwright.toolshop.resources.Resources.MAIN_URL;
+import static com.playwright.toolshop.testresources.Resources.MAIN_URL;
 
 
 @UsePlaywright

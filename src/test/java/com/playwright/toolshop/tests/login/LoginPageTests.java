@@ -4,7 +4,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.pages.LoginPage;
-import com.playwright.toolshop.tests.BaseTest;
+import com.playwright.toolshop.tests.BaseTestRunner;
 import com.playwright.toolshop.utils.User;
 import com.playwright.toolshop.utils.UserAPIClient;
 import org.assertj.core.api.Assertions;
@@ -12,7 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 @UsePlaywright(HeadlessChromeOptions.class)
-public class LoginPageTests extends BaseTest {
+public class LoginPageTests extends BaseTestRunner {
     LoginPage loginPage;
     UserAPIClient userAPIClient;
 
@@ -20,6 +20,7 @@ public class LoginPageTests extends BaseTest {
     public void setUp(Page page){
         loginPage = new LoginPage(page);
         loginPage.open();
+        userAPIClient = new UserAPIClient(page);
     }
 
     @Test
@@ -45,11 +46,9 @@ public class LoginPageTests extends BaseTest {
     }
 
     @Test
-    void newValidUserShouldNotBeLoggedIn(Page page){
-        userAPIClient = new UserAPIClient(page);
+    void newValidUserShouldNotBeLoggedIn(){
         User validUser = User.randomUser();
         userAPIClient.createUserViaAPI(validUser);
-
         loginPage.loginAs(validUser);
         Assertions.assertThat(loginPage.title()).isEqualTo("My account");
     }

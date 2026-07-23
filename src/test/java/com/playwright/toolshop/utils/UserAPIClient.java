@@ -4,7 +4,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.RequestOptions;
 
-import static com.playwright.toolshop.resources.Resources.BASE_API_URL;
+import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
 
 @UsePlaywright
 public class UserAPIClient {
