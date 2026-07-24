@@ -58,7 +58,7 @@ public class ProductAPITests extends BaseAPITestRunner {
     void mockedResponseSortedAZ() {
         mockAPI.mockRequest(PRODUCTS_REQUEST_URL, PRODUCTS_SORTED_A_Z, 200);
         navigationPage.selectSortBy("Name (A - Z)");
-        Assertions.assertThat(mainPage.countSearchedResults()).isEqualTo(9);
+        Assertions.assertThat(mainPage.productCount()).isEqualTo(9);
     }
 
     public record Product(String name, Double price) {

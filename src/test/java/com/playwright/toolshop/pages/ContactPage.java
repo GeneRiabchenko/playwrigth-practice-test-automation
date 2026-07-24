@@ -3,6 +3,7 @@ package com.playwright.toolshop.pages;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 
 import java.nio.file.Path;
@@ -43,58 +44,71 @@ public class ContactPage {
 
     }
 
+    @Step("Open contact page")
     public void goToContactPage(){
         page.navigate(CONTACTS_URL);
     }
 
+    @Step("Fill the first name field")
     public void fillFirstName(String firstName){
         FIRST_NAME_FIELD.clear();
         FIRST_NAME_FIELD.fill(firstName);
     }
 
+    @Step("Fill the last name field")
     public void fillLastName(String lastName){
         LAST_NAME_FIELD.clear();
         LAST_NAME_FIELD.fill(lastName);
     }
 
+    @Step("Fill the email field")
     public void fillEmail(String lastName){
         EMAIL_FIELD.clear();
         EMAIL_FIELD.fill(lastName);
     }
 
+    @Step("Select subject option")
     public void selectSubject(String subject){
         SUBJECT_FIELD.selectOption(subject);
     }
 
+    @Step("Fill the message input field")
     public void fillMessage(String message){
         MESSAGE_FIELD.clear();
         MESSAGE_FIELD.fill(message);
     }
 
+    @Step("Upload file")
     public void uploadFile(Path pathToFile){
         UPLOAD_FILE_BUTTON.setInputFiles(pathToFile);
     }
 
+    @Step("Click send on the contact form")
     public void clickSend(){
         SEND_BUTTON.click();
     }
 
+    @Step("Check error message under the first name field")
     public void checkFirstNameErrorMessage(String expectedMessage){
         Assertions.assertEquals(expectedMessage, FIRST_NAME_FIELD_ERROR.innerText());
     }
 
+    @Step("Check error message under the last name field")
     public void checkLastNameErrorMessage(String expectedMessage){
         Assertions.assertEquals(expectedMessage, LAST_NAME_FIELD_ERROR.innerText());
     }
 
+    @Step("Check error message under the email field")
     public void checkEmailErrorMessage(String expectedMessage){
         Assertions.assertEquals(expectedMessage, EMAIL_FIELD_ERROR.innerText());
     }
 
+    @Step("Check error message under the subject field")
     public void checkSubjectErrorMessage(String expectedMessage){
         Assertions.assertEquals(expectedMessage, SUBJECT_FIELD_ERROR.innerText());
     }
 
+    @Step("Check error  under the message field")
     public void checkMessageFieldErrorMessage(String expectedMessage){
         Assertions.assertEquals(expectedMessage, MESSAGE_FIELD_ERROR.innerText());
     }

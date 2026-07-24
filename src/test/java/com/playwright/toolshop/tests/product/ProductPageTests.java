@@ -7,6 +7,7 @@ import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.pages.ProductPage;
 import com.playwright.toolshop.tests.BaseTestRunner;
 import com.playwright.toolshop.utils.enums.Specs;
+import io.qameta.allure.Feature;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,6 +24,7 @@ public class ProductPageTests extends BaseTestRunner {
         mainPage.navigate();
     }
 
+    @Feature("Product Catalog")
     @Test
     void productSpecificationsShouldMatch(){
         mainPage.openProductByName("Pliers");

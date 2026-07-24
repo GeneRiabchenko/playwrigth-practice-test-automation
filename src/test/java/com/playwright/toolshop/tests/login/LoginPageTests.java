@@ -19,7 +19,7 @@ public class LoginPageTests extends BaseTestRunner {
     @BeforeEach
     public void setUp(Page page){
         loginPage = new LoginPage(page);
-        loginPage.open();
+        loginPage.navigate();
         userAPIClient = new UserAPIClient(page);
     }
 
