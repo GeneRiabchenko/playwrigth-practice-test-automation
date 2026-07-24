@@ -10,9 +10,12 @@ import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.RequestOptions;
 import com.playwright.toolshop.utils.Address;
 import com.playwright.toolshop.utils.User;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
@@ -37,7 +40,10 @@ public class ContactAPITest {
         }
     }
 
+    @Epic("Contact EPIC")
+    @Feature("Contacts")
     @Test
+    @DisplayName("Valid user should be created via API")
     void validUserIsCreated(){
         Gson gson = new Gson();
         User validUser = User.randomUser();
@@ -64,7 +70,10 @@ public class ContactAPITest {
 
     }
 
+    @Epic("Contact EPIC")
+    @Feature("Creating new user API")
     @Test
+    @DisplayName("First name field is mandatory for user creation via API")
     void firstNameIsMandatory(){
         User userWithNoName = new User(
                 null,

@@ -8,6 +8,7 @@ import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.pages.ProductPage;
 import com.playwright.toolshop.tests.BaseTestRunner;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -42,23 +43,26 @@ public class MainPageTests extends BaseTestRunner {
         Assertions.assertEquals("Practice Software Testing - Toolshop - v5.0", mainPage.getTitle());
     }
 
+    @Feature("Product Catalog")
     @Test
     void checkSearchFeature(){
         leftNavigationPage.search("pliers");
         Assertions.assertEquals("Searched for: pliers", mainPage.getSearchForLabel());
-        Assertions.assertEquals(4, mainPage.countSearchedResults());
+        Assertions.assertEquals(4, mainPage.productCount());
         mainPage.checkProductNames(EXPECTED_PRODUCTS_PLIERS);
     }
 
+    @Feature("Product Catalog")
     @Test
     void checkOutOfStockItemsAreNotFilteredBySearch(){
         leftNavigationPage.search("pliers");
         Assertions.assertEquals("Searched for: pliers", mainPage.getSearchForLabel());
-        Assertions.assertEquals(4, mainPage.countSearchedResults());
+        Assertions.assertEquals(4, mainPage.productCount());
         Assertions.assertEquals(EXPECTED_OUT_OF_STOCK_PRODUCTS, mainPage.getOutOfStockItems());
         mainPage.checkProductNames(EXPECTED_PRODUCTS_PLIERS);
     }
 
+    @Feature("Product Catalog")
     @Test
     void checkThatProductPageIsOpenedAndBadgesAreShown(){
         mainPage.clickElementByText("Bolt Cutters");
@@ -67,6 +71,7 @@ public class MainPageTests extends BaseTestRunner {
         PlaywrightAssertions.assertThat(mainPage.getBadgeByText("Pliers")).isVisible();
     }
 
+    @Feature("Product Catalog")
     @Test
     void checkRelatedProduct(){
         mainPage.clickElementByAltText("Combination Pliers");
@@ -75,17 +80,20 @@ public class MainPageTests extends BaseTestRunner {
         PlaywrightAssertions.assertThat(mainPage.getElementByAltText("Long Nose Pliers")).isVisible();
     }
 
+    @Feature("Product Catalog")
     @Test
     void shouldShowProductImages(){
         mainPage.checkProductImagesTitles(EXPECTED_PRODUCTS_MAIN_PAGE);
     }
 
+    @Feature("Filter")
     @Test
     void shouldFilterProductsByCategory(){
         leftNavigationPage.selectPowerToolsCategory();
         mainPage.checkProductNames(EXPECTED_POWER_TOOLS);
     }
 
+    @Feature("Product Catalog")
     @Test
     void clickingOnSiteLogoRedirectsToMainPage(){
         mainPage.clickElementByAltText("Combination Pliers");
@@ -93,6 +101,7 @@ public class MainPageTests extends BaseTestRunner {
         mainPage.checkUrl(MAIN_URL);
     }
 
+    @Feature("Shopping Cart")
     @Test
     void shouldDisplayToasterMessage(){
         mainPage.clickElementByText("Bolt Cutters");
@@ -101,6 +110,7 @@ public class MainPageTests extends BaseTestRunner {
         mainPage.waitForTheToasterMessageToDisappear();
     }
 
+    @Feature("Shopping Cart")
     @Test
     void shouldUpdateCartItemCount(){
         mainPage.clickElementByText("Bolt Cutters");

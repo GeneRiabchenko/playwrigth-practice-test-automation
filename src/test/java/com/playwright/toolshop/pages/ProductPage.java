@@ -4,6 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.utils.enums.Specs;
+import io.qameta.allure.Step;
 
 import static com.playwright.toolshop.testresources.Resources.MAIN_URL;
 
@@ -26,18 +27,22 @@ public class ProductPage extends BasePage {
     }
 
     @Override
+    @Step("Return main url")
     protected String getUrl() {
         return MAIN_URL;
     }
 
+    @Step("Click on the cart icon to add product to the cart")
     public void addToCart(){
         ADD_TO_CART_BUTTON.click();
     }
 
+    @Step("Click on the favorites icon to add product to favorites")
     public void addToFavorites(){
         ADD_TO_FAVORITES.click();
     }
 
+    @Step("Return value of the specification by name")
     public String getSpecValueByName(Specs specName){
         SPECIFICATIONS_TABLE.waitFor();
         return SPECIFICATIONS_ROWS

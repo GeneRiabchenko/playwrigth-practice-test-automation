@@ -6,6 +6,7 @@ import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.tests.BaseTestRunner;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -31,25 +32,28 @@ public class SearchTests extends BaseTestRunner {
         leftNavigationPage = new LeftNavigationPage(page);
     }
 
+    @Feature("Product Catalog")
     @Test
     public void searchDoesNotWorkWhenEmpty(){
         leftNavigationPage.search("");
         mainPage.checkProductNames(EXPECTED_PRODUCTS_MAIN_PAGE);
     }
 
-    @DisplayName("Check that no results are shown when search doesn't match with any product")
+    @Feature("Product Catalog")
     @Test
+    @DisplayName("Check that no results are shown when search doesn't match with any product")
     public void noMatchesTest(){
         String searchString = "4564746";
         int expectedCount = 0;
         leftNavigationPage.search(searchString);
         mainPage.checkSearchCountField(expectedCount, searchString);
-        assertEquals(expectedCount, mainPage.countSearchedResults());
+        assertEquals(expectedCount, mainPage.productCount());
         mainPage.isNoProductMessageShown(true);
     }
 
-    @DisplayName("Cross button should clear search results")
+    @Feature("Filter")
     @Test
+    @DisplayName("Cross button should clear search results")
     void crossButtonClearsSearchResult() {
         leftNavigationPage.search("pliers");
         mainPage.checkProductNames(EXPECTED_PRODUCTS_PLIERS);

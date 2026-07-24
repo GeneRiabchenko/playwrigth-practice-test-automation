@@ -3,6 +3,7 @@ package com.playwright.toolshop.pages;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
+import io.qameta.allure.Step;
 
 import static com.playwright.toolshop.testresources.Resources.PRODUCTS_REQUEST_URL;
 
@@ -39,6 +40,7 @@ public class LeftNavigationPage extends MainPage {
         SEARCH_INPUT.clear();
     }
 
+    @Step("Search specified product")
     public void search(String searchString){
         SEARCH_INPUT.clear();
         SEARCH_INPUT.fill(searchString);
@@ -48,12 +50,14 @@ public class LeftNavigationPage extends MainPage {
         }
     }
 
+    @Step("Select 'Power Tools' category")
     public void selectPowerToolsCategory(){
         page.getByRole(AriaRole.MENUBAR).getByText("Categories").click();
         page.getByRole(AriaRole.MENUBAR).getByText("Power Tools").click();
         page.waitForCondition(CARD_IMAGES.first()::isVisible);
     }
 
+    @Step("Change sorting of products")
     public void selectSortBy(String sortBy){
         SORT_BY_DROPDOWN.selectOption(sortBy);
     }

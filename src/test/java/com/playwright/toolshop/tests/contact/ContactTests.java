@@ -5,7 +5,10 @@ import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
 import com.playwright.toolshop.pages.ContactPage;
 import com.playwright.toolshop.tests.BaseTestRunner;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
@@ -23,7 +26,10 @@ public class ContactTests extends BaseTestRunner {
         contactPage.goToContactPage();
     }
 
+    @Epic("Contact EPIC")
+    @Feature("Creating new user web")
     @Test
+    @DisplayName("Send contact request")
     void sendContactRequest() {
         Path fileToUpload = Paths.get(SAMPLE_FILE_URI);
         contactPage.fillFirstName("Vasya");
@@ -35,7 +41,10 @@ public class ContactTests extends BaseTestRunner {
         contactPage.clickSend();
     }
 
+    @Epic("Contact EPIC")
+    @Feature("Contacts")
     @Test
+    @DisplayName("Check contact request validations")
     void checkContactPageErrorMessages(){
         contactPage.clickSend();
         contactPage.checkFirstNameErrorMessage("First name is required");
