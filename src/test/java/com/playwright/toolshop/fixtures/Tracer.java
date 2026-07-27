@@ -1,4 +1,4 @@
-package com.playwright.toolshop.tests;
+package com.playwright.toolshop.fixtures;
 
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Tracing;

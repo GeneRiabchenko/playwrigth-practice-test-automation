@@ -4,14 +4,14 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
+import com.playwright.toolshop.fixtures.BaseTestRunner;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.pages.ProductPage;
-import com.playwright.toolshop.tests.BaseTestRunner;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
@@ -39,12 +39,14 @@ public class MainPageTests extends BaseTestRunner {
 
 
     @Test
+    @DisplayName("Correct title should be shown on the main page")
     void shouldShowTitle(){
         Assertions.assertEquals("Practice Software Testing - Toolshop - v5.0", mainPage.getTitle());
     }
 
     @Feature("Product Catalog")
     @Test
+    @DisplayName("Correct searched products should be shown")
     void checkSearchFeature(){
         leftNavigationPage.search("pliers");
         Assertions.assertEquals("Searched for: pliers", mainPage.getSearchForLabel());
@@ -54,6 +56,7 @@ public class MainPageTests extends BaseTestRunner {
 
     @Feature("Product Catalog")
     @Test
+    @DisplayName("Out of stock products should not be filtered by search")
     void checkOutOfStockItemsAreNotFilteredBySearch(){
         leftNavigationPage.search("pliers");
         Assertions.assertEquals("Searched for: pliers", mainPage.getSearchForLabel());
@@ -64,6 +67,7 @@ public class MainPageTests extends BaseTestRunner {
 
     @Feature("Product Catalog")
     @Test
+    @DisplayName("Out of stock products should not be filtered by search")
     void checkThatProductPageIsOpenedAndBadgesAreShown(){
         mainPage.clickElementByText("Bolt Cutters");
         PlaywrightAssertions.assertThat(mainPage.getElementByAltText("Bolt Cutters")).isVisible();
@@ -73,6 +77,7 @@ public class MainPageTests extends BaseTestRunner {
 
     @Feature("Product Catalog")
     @Test
+    @DisplayName("Check related products")
     void checkRelatedProduct(){
         mainPage.clickElementByAltText("Combination Pliers");
         PlaywrightAssertions.assertThat(mainPage.getElementByAltText("Slip Joint Pliers")).isVisible();
@@ -82,12 +87,14 @@ public class MainPageTests extends BaseTestRunner {
 
     @Feature("Product Catalog")
     @Test
+    @DisplayName("Product images with titles should be shown")
     void shouldShowProductImages(){
         mainPage.checkProductImagesTitles(EXPECTED_PRODUCTS_MAIN_PAGE);
     }
 
     @Feature("Filter")
     @Test
+    @DisplayName("Product should be filtered by category")
     void shouldFilterProductsByCategory(){
         leftNavigationPage.selectPowerToolsCategory();
         mainPage.checkProductNames(EXPECTED_POWER_TOOLS);
@@ -95,6 +102,7 @@ public class MainPageTests extends BaseTestRunner {
 
     @Feature("Product Catalog")
     @Test
+    @DisplayName("Clicking on Page logo redirects to main page")
     void clickingOnSiteLogoRedirectsToMainPage(){
         mainPage.clickElementByAltText("Combination Pliers");
         mainPage.clickElementByTitle("Practice Software Testing - Toolshop");
@@ -103,6 +111,7 @@ public class MainPageTests extends BaseTestRunner {
 
     @Feature("Shopping Cart")
     @Test
+    @DisplayName("Clicking on Page logo redirects to main page")
     void shouldDisplayToasterMessage(){
         mainPage.clickElementByText("Bolt Cutters");
         productPage.addToCart();
@@ -119,7 +128,6 @@ public class MainPageTests extends BaseTestRunner {
     }
 
     @Test
-    @Disabled
     void waitForAPIResponse(){
 
         //https://api.practicesoftwaretesting.com/products?page=0&sort=price,desc&between=price,1,100&is_rental=false

@@ -7,9 +7,9 @@ import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
+import com.playwright.toolshop.fixtures.BaseAPITestRunner;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
-import com.playwright.toolshop.tests.BaseAPITestRunner;
 import com.playwright.toolshop.utils.MockAPI;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,7 +24,6 @@ import java.util.stream.Stream;
 import static com.playwright.toolshop.testresources.Resources.PRODUCTS_REQUEST_URL;
 import static com.playwright.toolshop.testresources.data.mocks.ProductsMock.PRODUCTS_SORTED_A_Z;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 
 @UsePlaywright(HeadlessChromeOptions.class)
 public class ProductAPITests extends BaseAPITestRunner {
@@ -46,8 +45,8 @@ public class ProductAPITests extends BaseAPITestRunner {
 
     @DisplayName("Checking price and name in the API")
     @ParameterizedTest(name = "Checking product {0}")
-    @Disabled
     @MethodSource("products")
+    @Disabled
     void checkKnownProducts(Product product){
         navigationPage.search(product.name);
         mainPage.isFilteredProductByNameAndPriceVisible(product.name, product.price, true);
