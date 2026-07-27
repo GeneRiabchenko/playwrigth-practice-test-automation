@@ -1,17 +1,19 @@
-package com.playwright.toolshop.tests;
+package com.playwright.toolshop.fixtures;
 
 import com.microsoft.playwright.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.extension.TestWatcher;
 
 import java.util.HashMap;
 
 import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
 import static com.playwright.toolshop.testresources.Resources.BROWSER_LAUNCH_OPTION;
 
-public abstract class BaseTestRunner extends Tracer {
+@ExtendWith(TestWatcherExtension.class)
+public abstract class BaseTestRunner extends Tracer implements TestWatcher, ScreenshotManager {
     protected static ThreadLocal<Playwright> playwright
             = ThreadLocal.withInitial(() -> {
                         Playwright playwright = Playwright.create();
@@ -28,7 +30,7 @@ public abstract class BaseTestRunner extends Tracer {
 
     protected BrowserContext browserContext;
     protected APIRequestContext requestContext;
-    protected Page page;
+    protected static Page page;
 
     @BeforeEach
     public void setupRequestContext() {
@@ -43,13 +45,16 @@ public abstract class BaseTestRunner extends Tracer {
 
     @BeforeEach
     void setUp() {
-        browserContext = browser.get().newContext();
+        browserContext = browser.get().newContext(new Browser.NewContextOptions()
+                .setViewportSize(1920, 1080));
+        browserContext.setDefaultTimeout(10000);
+        browserContext.setDefaultNavigationTimeout(10000);
         page = browserContext.newPage();
     }
 
 
     @AfterEach
-    void tearDownTest(TestInfo info) {
+    void tearDownTest() {
         browserContext.close();
         requestContext.dispose();
     }
@@ -62,8 +67,5 @@ public abstract class BaseTestRunner extends Tracer {
         playwright.get().close();
         playwright.remove();
     }
-
-
-
 }
 

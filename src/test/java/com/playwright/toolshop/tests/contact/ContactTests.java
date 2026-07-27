@@ -3,8 +3,8 @@ package com.playwright.toolshop.tests.contact;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
+import com.playwright.toolshop.fixtures.BaseTestRunner;
 import com.playwright.toolshop.pages.ContactPage;
-import com.playwright.toolshop.tests.BaseTestRunner;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.BeforeEach;
@@ -51,7 +51,7 @@ public class ContactTests extends BaseTestRunner {
         contactPage.checkLastNameErrorMessage("Last name is required");
         contactPage.checkEmailErrorMessage("Email is required");
         contactPage.checkSubjectErrorMessage("Subject is required");
-        contactPage.checkMessageFieldErrorMessage("Message is required");
+        contactPage.checkMessageFieldErrorMessage("Message is require");
     }
 
 }
