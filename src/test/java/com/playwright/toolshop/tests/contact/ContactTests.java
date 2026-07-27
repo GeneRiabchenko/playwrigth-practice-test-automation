@@ -51,7 +51,7 @@ public class ContactTests extends BaseTestRunner {
         contactPage.checkLastNameErrorMessage("Last name is required");
         contactPage.checkEmailErrorMessage("Email is required");
         contactPage.checkSubjectErrorMessage("Subject is required");
-        contactPage.checkMessageFieldErrorMessage("Message is require");
+        contactPage.checkMessageFieldErrorMessage("Message is required");
     }
 
 }
