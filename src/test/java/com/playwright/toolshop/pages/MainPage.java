@@ -4,6 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.AriaRole;
+import com.playwright.toolshop.utils.ProductSummary;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 
@@ -31,11 +32,13 @@ public class MainPage extends BasePage {
     protected final Locator SEARCH_RESULT_COUNT;
     protected final Locator NO_RESULT_MESSAGE;
     protected final Locator PRODUCT_CONTAINER;
+    protected final Locator FILTER_COMPLETED;
 
     public MainPage(Page page) {
         super(page);
         this.page = page;
         this.SEARCH_FINISHED_STATE = page.locator("[data-test=search_completed]");
+        this.FILTER_COMPLETED = page.locator("[data-test=filter_completed]");
         this.SEARCH_FOR_LABEL = page.getByTestId("search-caption");
         this.CARD_LOCATOR = page.locator(".card");
         this.BADGE_LOCATOR = page.locator(".badge");
@@ -87,6 +90,11 @@ public class MainPage extends BasePage {
         Assertions.assertEquals(expectedProductName, PRODUCT_NAME.allInnerTexts());
     }
 
+    @Step("Is searched product displayed")
+    public void isSearchedProductDisplayed(String productName){
+        Assertions.assertTrue(PRODUCT_NAME.getByText(productName).isVisible());
+    }
+
     @Step("Check product image titles")
     public void checkProductImagesTitles(List<String> expectedProductImageTitles){
         page.waitForCondition(CARD_IMAGES.first()::isVisible);
@@ -133,6 +141,11 @@ public class MainPage extends BasePage {
         assertEquals(isShown, NO_RESULT_MESSAGE.isVisible());
     }
 
+    @Step("Return no-result message")
+    public String getNoResultMessage(){
+        return NO_RESULT_MESSAGE.textContent();
+    }
+
     @Step("Check products is shown having specified name and price")
     public void isFilteredProductByNameAndPriceVisible(String name, Double price, boolean isVisible){
         Locator productCard = CARD_LOCATOR.filter(
@@ -152,6 +165,17 @@ public class MainPage extends BasePage {
     public String getTitle(){
         PRODUCT_CONTAINER.first().waitFor();
         return page.title();
+    }
+
+    @Step("Return product summaries")
+    public List<ProductSummary> getProductSummaries(){
+        return CARD_LOCATOR.all()
+                .stream()
+                .map(productCard -> {
+                    String productName = productCard.getByTestId("product-name").textContent().strip();
+                    String price = productCard.getByTestId("product-price").textContent();
+                    return new ProductSummary(productName, price);
+                }).toList();
     }
 }
 
