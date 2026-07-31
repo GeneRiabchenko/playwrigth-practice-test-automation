@@ -5,6 +5,9 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 import io.qameta.allure.Step;
 
+import java.util.List;
+
+import static com.playwright.toolshop.testresources.Resources.MAIN_URL;
 import static com.playwright.toolshop.testresources.Resources.PRODUCTS_REQUEST_URL;
 
 public class LeftNavigationPage extends MainPage {
@@ -23,19 +26,29 @@ public class LeftNavigationPage extends MainPage {
         this.CROSS_BUTTON = page.getByTestId("search-reset");
     }
 
+    @Override
+    @Step("Return main url")
+    protected String getUrl() {
+        return MAIN_URL;
+    }
+
+    @Step("Click on search button")
     public void clickSearchButton(){
         SEARCH_BUTTON.click();
     }
 
+    @Step("Click on cross button")
     public void clickCrossButton(){
         page.waitForResponse(PRODUCTS_REQUEST_URL, CROSS_BUTTON::click);
     }
 
+    @Step("Enter string in the search field")
     public void fillSearchField(String searchString){
         SEARCH_INPUT.clear();
         SEARCH_INPUT.fill(searchString);
     }
 
+    @Step("Clear search field")
     public void clearSearchField(){
         SEARCH_INPUT.clear();
     }
@@ -60,5 +73,15 @@ public class LeftNavigationPage extends MainPage {
     @Step("Change sorting of products")
     public void selectSortBy(String sortBy){
         SORT_BY_DROPDOWN.selectOption(sortBy);
+    }
+
+    @Step("Select category from left menu")
+    public void selectCategory(List<String> categories){
+        for (String category : categories) {
+            page.waitForResponse(PRODUCTS_REQUEST_URL, () -> page.locator("label", new Page.LocatorOptions().setHasText(category))
+                    .locator("input[type='checkbox']")
+                    .check());
+            page.waitForCondition(FILTER_COMPLETED::isVisible);
+        }
     }
 }

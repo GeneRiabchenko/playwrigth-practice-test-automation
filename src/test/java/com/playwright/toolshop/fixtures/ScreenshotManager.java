@@ -9,8 +9,6 @@ import org.junit.jupiter.api.TestInfo;
 import java.io.ByteArrayInputStream;
 import java.nio.file.Paths;
 
-import static com.playwright.toolshop.fixtures.GetTestName.getTestName;
-
 public interface ScreenshotManager {
 
     @AfterEach
@@ -20,6 +18,10 @@ public interface ScreenshotManager {
                     .setPath(Paths.get("target/screenshots/" + getTestName(info)))
                     .setFullPage(true));
             Allure.addAttachment(getTestName(info), new ByteArrayInputStream(screenShot));
+    }
+
+    private static String getTestName(TestInfo info) {
+        return info.getDisplayName().replace("()", "").toLowerCase();
     }
 }
 
