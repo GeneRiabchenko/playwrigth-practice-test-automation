@@ -72,4 +72,22 @@ public class ProductCatalogStepDefinitions {
     public void actorSelectsFollowingCategories(List<String> categories) {
         navBar.selectCategory(categories);
     }
+
+    @When("Actor sorts by {string}")
+    public void actorSortsBy(String sortBy) {
+        navBar.selectSortBy(sortBy);
+    }
+
+    @Then("the following product name are shown:")
+    public void theFollowingProductNameAreShown(List<String> expectedProductNames) {
+        List<String> actualProductNames = mainPage.getProductNames();
+        Assertions.assertEquals(expectedProductNames, actualProductNames);
+    }
+
+    @Then("the following product prices are shown:")
+    public void theFollowingProductPricesAreShown(List<String> expectedProductPrices) {
+        List<String> actualProductPrices = mainPage.getProductPrices();
+        Assertions.assertEquals(expectedProductPrices, actualProductPrices);
+
+    }
 }

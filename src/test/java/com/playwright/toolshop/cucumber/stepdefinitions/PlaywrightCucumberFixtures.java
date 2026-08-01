@@ -18,7 +18,7 @@ public class PlaywrightCucumberFixtures {
     private static final ThreadLocal<Browser> browser = ThreadLocal.withInitial(() ->
             playwright.get().chromium().launch(
                     new BrowserType.LaunchOptions()
-                            .setHeadless(false)
+                            .setHeadless(true)
                             .setArgs(BROWSER_LAUNCH_OPTION)
             )
     );
@@ -52,5 +52,9 @@ public class PlaywrightCucumberFixtures {
 
     public static Page getPage(){
         return page.get();
+    }
+
+    public static BrowserContext getBrowserContext() {
+        return browserContext.get();
     }
 }

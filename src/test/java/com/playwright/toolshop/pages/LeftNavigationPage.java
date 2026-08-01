@@ -73,6 +73,7 @@ public class LeftNavigationPage extends MainPage {
     @Step("Change sorting of products")
     public void selectSortBy(String sortBy){
         SORT_BY_DROPDOWN.selectOption(sortBy);
+        page.waitForCondition(SORTING_COMPLETED::isVisible);
     }
 
     @Step("Select category from left menu")
