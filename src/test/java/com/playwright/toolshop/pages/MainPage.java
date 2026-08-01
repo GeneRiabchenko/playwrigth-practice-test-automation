@@ -22,6 +22,7 @@ public class MainPage extends BasePage {
     protected final Locator CARD_LOCATOR;
     protected final Locator BADGE_LOCATOR;
     protected final Locator PRODUCT_NAME;
+    protected final Locator PRODUCT_PRICE;
     protected final Locator OUT_OF_STOCK;
     protected final Locator CARD_IMAGES;
     protected final Locator NAV_CATEGORIES;
@@ -33,16 +34,17 @@ public class MainPage extends BasePage {
     protected final Locator NO_RESULT_MESSAGE;
     protected final Locator PRODUCT_CONTAINER;
     protected final Locator FILTER_COMPLETED;
+    protected final Locator SORTING_COMPLETED;
 
     public MainPage(Page page) {
         super(page);
         this.page = page;
         this.SEARCH_FINISHED_STATE = page.locator("[data-test=search_completed]");
-        this.FILTER_COMPLETED = page.locator("[data-test=filter_completed]");
         this.SEARCH_FOR_LABEL = page.getByTestId("search-caption");
         this.CARD_LOCATOR = page.locator(".card");
         this.BADGE_LOCATOR = page.locator(".badge");
         this.PRODUCT_NAME = page.getByTestId("product-name");
+        this.PRODUCT_PRICE = page.getByTestId("product-price");
         this.OUT_OF_STOCK = page.getByTestId("out-of-stock");
         this.CARD_IMAGES = page.locator(".card-img-top");
         this.NAV_CATEGORIES = page.getByTestId("nav-categories");
@@ -53,6 +55,8 @@ public class MainPage extends BasePage {
         this.SEARCH_RESULT_COUNT = page.getByTestId("search-result-count");
         this.NO_RESULT_MESSAGE = page.getByTestId("no-results");
         this.PRODUCT_CONTAINER = page.locator(".container");
+        this.FILTER_COMPLETED = page.getByTestId("filter_completed");
+        this.SORTING_COMPLETED = page.getByTestId("sorting_completed");
     }
 
     @Override
@@ -176,6 +180,16 @@ public class MainPage extends BasePage {
                     String price = productCard.getByTestId("product-price").textContent();
                     return new ProductSummary(productName, price);
                 }).toList();
+    }
+
+    @Step("Return list of the product names")
+    public List<String> getProductNames(){
+        return PRODUCT_NAME.allInnerTexts();
+    }
+
+    @Step("Return list of the product prices")
+    public List<String> getProductPrices(){
+        return PRODUCT_PRICE.allInnerTexts();
     }
 }
 

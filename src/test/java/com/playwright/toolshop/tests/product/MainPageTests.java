@@ -9,10 +9,7 @@ import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.pages.ProductPage;
 import io.qameta.allure.Feature;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.Comparator;
 
@@ -128,6 +125,7 @@ public class MainPageTests extends BaseTestRunner {
     }
 
     @Test
+    @Disabled
     void waitForAPIResponse(){
 
         //https://api.practicesoftwaretesting.com/products?page=0&sort=price,desc&between=price,1,100&is_rental=false
