@@ -1,0 +1,78 @@
+name: Playwright Tests
+
+# Trigger the workflow on every push to any branch
+on:
+  push:
+    branches:
+      - '**'  # Run on every branch for every commit
+  pull_request:
+    branches:
+      - '**'  # Run on every pull request for any branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # Step 3: Set up JDK 21
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      # Step 4: Install Maven 3.9.9
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@v1.7.0
+        with:
+          checkout-fetch-depth: 0
+          java-version: 21
+          java-distribution: temurin
+          maven-version: 3.9.9
+
+      # Step 5: Verify Maven installation
+      - name: Verify Maven version
+        run: mvn --version
+
+      # Step 6: Install playwright dependencies
+      - name: Install Playwright dependencies
+        run: npx playwright install --with-deps
+
+      # Step 7: Cache Maven dependencies
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven
+
+      # Step 8: Run Maven to execute Playwright tests
+      - name: Run Playwright Tests
+        run: mvn clean verify
+
+      # Step 9: Archive traces
+      - name: Archive traces
+        if: always()
+        uses: actions/upload-artifacts@v4
+        with:
+          name: traces
+          path: target/traces/*.zip
+
+      # Step 10: Deploy allure report to GitHub Pages
+      - name: Deploy allure report to Github Pages
+        if: always() # Runs this step if tests failed
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/site/allure-maven-plugin

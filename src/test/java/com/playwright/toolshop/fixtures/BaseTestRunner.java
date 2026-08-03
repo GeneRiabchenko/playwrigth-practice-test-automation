@@ -4,6 +4,7 @@ import com.microsoft.playwright.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.extension.TestWatcher;
 
 import java.util.HashMap;
@@ -11,7 +12,7 @@ import java.util.HashMap;
 import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
 import static com.playwright.toolshop.testresources.Resources.BROWSER_LAUNCH_OPTION;
 
-//@ExtendWith(TestWatcherExtension.class)
+@ExtendWith(TestWatcherExtension.class)
 public abstract class BaseTestRunner extends Tracer implements TestWatcher, ScreenshotManager {
     protected static ThreadLocal<Playwright> playwright
             = ThreadLocal.withInitial(() -> {
