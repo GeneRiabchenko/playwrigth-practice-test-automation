@@ -1,0 +1,31 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+#
+# To use this workflow, you will need to set up a .github/labeler.yml
+# file with configuration.  For more information, see:
+# https://github.com/actions/labeler
+
+name: Require PR Label
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+jobs:
+  check-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check required label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const requiredLabel = 'Ready To Merge';
+
+            const labels = context.payload.pull_request.labels.map(l => l.name);
+
+            if (!labels.includes(requiredLabel)) {
+              core.setFailed(
+                `Pull request must have the '${requiredLabel}' label before it can be merged.`
+              );
+            }
