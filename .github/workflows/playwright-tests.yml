@@ -1,5 +1,9 @@
 name: Playwright Tests
 
+permissions:
+  contents: write
+  pages: write
+
 # Trigger the workflow on every push to any branch
 on:
   push:
@@ -16,7 +20,7 @@ jobs:
     steps:
       # Step 1: Check out the repository code
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: Set up Node.js
       - name: Set up Node.js
@@ -59,7 +63,7 @@ jobs:
 
       # Step 8: Run Maven to execute Playwright tests
       - name: Run Playwright Tests
-        run: mvn clean verify
+        run: mvn verify
 
       # Step 9: Archive traces
       - name: Archive traces
