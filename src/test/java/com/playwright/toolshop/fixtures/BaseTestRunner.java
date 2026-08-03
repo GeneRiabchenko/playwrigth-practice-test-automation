@@ -50,6 +50,7 @@ public abstract class BaseTestRunner extends Tracer implements TestWatcher, Scre
         browserContext.setDefaultTimeout(10000);
         browserContext.setDefaultNavigationTimeout(10000);
         page = browserContext.newPage();
+        page.setDefaultTimeout(10000);
     }
 
 
