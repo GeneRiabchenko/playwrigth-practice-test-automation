@@ -11,11 +11,16 @@ import com.playwright.toolshop.fixtures.BaseAPITestRunner;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.utils.MockAPI;
+import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import net.serenitybdd.playwright.PlaywrightSerenity;
+import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -25,10 +30,18 @@ import static com.playwright.toolshop.testresources.Resources.PRODUCTS_REQUEST_U
 import static com.playwright.toolshop.testresources.data.mocks.ProductsMock.PRODUCTS_SORTED_A_Z;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@ExtendWith(SerenityJUnit5Extension.class)
+@ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright(HeadlessChromeOptions.class)
 public class ProductAPITests extends BaseAPITestRunner {
+
+    @Steps
     MainPage mainPage;
+
+    @Steps
     LeftNavigationPage navigationPage;
+
+    @Steps
     MockAPI mockAPI;
 
     @BeforeEach
@@ -38,9 +51,7 @@ public class ProductAPITests extends BaseAPITestRunner {
 
     @BeforeEach
     void setUp(Page page){
-        mainPage = new MainPage(page);
-        navigationPage = new LeftNavigationPage(page);
-        mockAPI = new MockAPI(page);
+        PlaywrightSerenity.registerPage(page);
     }
 
     @DisplayName("Checking price and name in the API")

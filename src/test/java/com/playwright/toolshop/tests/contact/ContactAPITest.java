@@ -10,17 +10,21 @@ import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.RequestOptions;
 import com.playwright.toolshop.utils.Address;
 import com.playwright.toolshop.utils.User;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import net.serenitybdd.annotations.Feature;
+import net.serenitybdd.annotations.Story;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
 
-
+@ExtendWith(SerenityJUnit5Extension.class)
+@ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright
 public class ContactAPITest {
     private APIRequestContext request;
@@ -40,8 +44,8 @@ public class ContactAPITest {
         }
     }
 
-    @Epic("Contact EPIC")
-    @Feature("Contacts")
+    @Story("Contact EPIC")
+    @Feature("Creating new user api")
     @Test
     @DisplayName("Valid user should be created via API")
     void validUserIsCreated(){
@@ -70,7 +74,7 @@ public class ContactAPITest {
 
     }
 
-    @Epic("Contact EPIC")
+    @Story("Contact EPIC")
     @Feature("Creating new user API")
     @Test
     @DisplayName("First name field is mandatory for user creation via API")

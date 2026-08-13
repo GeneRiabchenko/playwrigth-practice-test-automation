@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.AriaRole;
 import com.playwright.toolshop.utils.ProductSummary;
-import io.qameta.allure.Step;
+import net.serenitybdd.annotations.Step;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
@@ -109,7 +109,7 @@ public class MainPage extends BasePage {
         Assertions.assertEquals(expectedProductImageTitles, imagesTitles);
     }
 
-    @Step("Check toaster message")
+    @Step("Check toaster message {0}")
     public void waitForTheToasterMessage(String toasterMessage){
        assertEquals(page.getByRole(AriaRole.ALERT).innerText(), toasterMessage);
     }
@@ -119,12 +119,12 @@ public class MainPage extends BasePage {
         page.waitForCondition(TOASTER_MESSAGE::isHidden);
     }
 
-    @Step("Check cart items count")
+    @Step("Check cart items count {0}")
     public void checkCartItemCount(String expected){
         page.waitForCondition(() -> CART_QUANTITY.textContent().equals(expected));
     }
 
-    @Step("Check count label for specified searched product")
+    @Step("Check count label for specified {0} product")
     public void checkSearchCountField(int count, String searchString){
         String resultCountString;
         if (count == 1) {
@@ -150,7 +150,7 @@ public class MainPage extends BasePage {
         return NO_RESULT_MESSAGE.textContent();
     }
 
-    @Step("Check products is shown having specified name and price")
+    @Step("Check products is shown having specified {0} and {1}")
     public void isFilteredProductByNameAndPriceVisible(String name, Double price, boolean isVisible){
         Locator productCard = CARD_LOCATOR.filter(
                 new Locator.FilterOptions()
@@ -160,7 +160,7 @@ public class MainPage extends BasePage {
         assertEquals(isVisible, productCard.isVisible());
     }
 
-    @Step("Click on the product with exact specified name")
+    @Step("Click on the {0} product")
     public void openProductByName(String name){
         PRODUCT_NAME.getByText(name, new Locator.GetByTextOptions().setExact(true)).click();
     }

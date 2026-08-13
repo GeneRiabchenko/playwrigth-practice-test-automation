@@ -7,20 +7,24 @@ import com.playwright.toolshop.fixtures.BaseTestRunner;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.pages.ProductPage;
 import com.playwright.toolshop.utils.enums.Specs;
-import io.qameta.allure.Feature;
+import net.serenitybdd.annotations.Feature;
+import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+@ExtendWith(SerenityJUnit5Extension.class)
+@ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright(HeadlessChromeOptions.class)
 public class ProductPageTests extends BaseTestRunner {
-    MainPage mainPage;
-    ProductPage productPage;
+    @Steps MainPage mainPage;
+    @Steps ProductPage productPage;
 
     @BeforeEach
     public void setUp(Page page){
-        mainPage = new MainPage(page);
-        productPage = new ProductPage(page);
         mainPage.navigate();
     }
 
