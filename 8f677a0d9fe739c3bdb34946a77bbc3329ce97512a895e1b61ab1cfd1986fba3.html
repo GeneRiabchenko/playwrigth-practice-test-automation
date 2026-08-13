@@ -146,8 +146,11 @@
         <li >
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="bi bi-chat-text"></i> Stories</a>
+        </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 13-08-2026 09:49</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 13-08-2026 13:56</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -173,7 +176,14 @@
                                     <span class="badge example-tag tag-badge" style="background:default;">
                                     <i class="bi bi-tag-fill"></i>&nbsp;
                                         <a class="tagLink" style="background:default;"
-                                           href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                           href="2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html">Under 1 Second
+                                              (Duration)
+                                        </a>
+                                </span>
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
                                               (Duration)
                                         </a>
                                 </span>
@@ -355,17 +365,55 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">ERROR</span></td>
-                    <td width="100"><span class="top-level-step">11s 577ms</span></td>
+                    <td width="100"><span class="top-level-step">910ms</span></td>
                 </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">com.microsoft.playwright.impl.TargetClosedError: Error {<br>  message=&#39;Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>  name=&#39;TargetClosedError<br>  stack=&#39;TargetClosedError: Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-15238763875641811263/package/lib/server/dispatchers/dispatcher.js:375:15)<br>}<br>Call log:<br>- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-PM6RYy --remote-debugging-pipe --no-startup-window<br>- &lt;launched&gt; pid=8327<br>- [pid=8327][err] [8327:8327:0813/135640.547303:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY<br>- [pid=8327][err] [8327:8327:0813/135640.547918:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.<br></span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-1"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-1">
+            <div class="card">
+                <div class="card-header">
+                    <h4>com.microsoft.playwright.impl.TargetClosedError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)<br />com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)<br />com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)<br />com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)<br />com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)<br />com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)<br />com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)<br />com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)<br />com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
                     <tr>
                         <td colspan="5">
                             <table id="stepSection0" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-0"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -379,15 +427,15 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">512ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">653ms</span></td>
                 </tr>
-                <tr class="test-ERROR">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-1"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -401,53 +449,15 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">ERROR</span></td>
-                    <td width="100"><span class="nested-group-step">10s 913ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">653ms</span></td>
                 </tr>
-                    <tr class="test-ERROR">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">com.microsoft.playwright.TimeoutError: Error {<br>  message=&#39;Timeout 10000ms exceeded.<br>  name=&#39;TimeoutError<br>  stack=&#39;TimeoutError: Timeout 10000ms exceeded.<br>    at ProgressController.run (/tmp/playwright-java-13442967600156287285/package/lib/server/progress.js:78:26)<br>    at Frame.selectOption (/tmp/playwright-java-13442967600156287285/package/lib/server/frames.js:1181:23)<br>    at FrameDispatcher.selectOption (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/frameDispatcher.js:241:33)<br>    at FrameDispatcher._handleCommand (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:94:40)<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:361:39)<br>}<br>Call log:<br>- waiting for locator(&quot;internal:attr=[data-test=\&quot;sort\&quot;]&quot;)<br></span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-3"
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-3">
-            <div class="card">
-                <div class="card-header">
-                    <h4>com.microsoft.playwright.TimeoutError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)<br />com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)<br />com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)<br />com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)<br />com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)<br />com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:722)<br />com.microsoft.playwright.impl.FrameImpl.selectOptionImpl(FrameImpl.java:701)<br />com.microsoft.playwright.impl.FrameImpl.lambda$selectOption$2(FrameImpl.java:113)<br />com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)<br />com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)<br />com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:113)<br />com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:102)<br />com.microsoft.playwright.impl.LocatorImpl.selectOption(LocatorImpl.java:487)<br />com.microsoft.playwright.Locator.selectOption(Locator.java:4368)<br />com.playwright.toolshop.pages.LeftNavigationPage.selectSortBy(LeftNavigationPage.java:75)<br />com.playwright.toolshop.cucumber.stepdefinitions.ProductCatalogStepDefinitions.actorSortsBy(ProductCatalogStepDefinitions.java:78)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                        </td>
-                    </tr>
-                <tr class="test-SKIPPED">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-2"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-skip-forward skipped-icon ' title='SKIPPED'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -461,8 +471,8 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SKIPPED</span></td>
-                    <td width="100"><span class="nested-group-step"></span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">653ms</span></td>
                 </tr>
 
                             </table>
@@ -493,17 +503,55 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">ERROR</span></td>
-                    <td width="100"><span class="top-level-step">23s 092ms</span></td>
+                    <td width="100"><span class="top-level-step">1s 970ms</span></td>
                 </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">com.microsoft.playwright.impl.TargetClosedError: Error {<br>  message=&#39;Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>  name=&#39;TargetClosedError<br>  stack=&#39;TargetClosedError: Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-15238763875641811263/package/lib/server/dispatchers/dispatcher.js:375:15)<br>}<br>Call log:<br>- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-SmLcb3 --remote-debugging-pipe --no-startup-window<br>- &lt;launched&gt; pid=8260<br>- [pid=8260][err] [8260:8260:0813/135640.291275:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY<br>- [pid=8260][err] [8260:8260:0813/135640.291313:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.<br></span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-5"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-5">
+            <div class="card">
+                <div class="card-header">
+                    <h4>com.microsoft.playwright.impl.TargetClosedError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)<br />com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)<br />com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)<br />com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)<br />com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)<br />com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)<br />com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)<br />com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)<br />com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
                     <tr>
                         <td colspan="5">
                             <table id="stepSection1" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="1-0"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -517,15 +565,15 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">503ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">947ms</span></td>
                 </tr>
-                <tr class="test-ERROR">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="1-1"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -539,53 +587,15 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">ERROR</span></td>
-                    <td width="100"><span class="nested-group-step">21s 714ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">946ms</span></td>
                 </tr>
-                    <tr class="test-ERROR">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">com.microsoft.playwright.TimeoutError: Error {<br>  message=&#39;Timeout 10000ms exceeded.<br>  name=&#39;TimeoutError<br>  stack=&#39;TimeoutError: Timeout 10000ms exceeded.<br>    at ProgressController.run (/tmp/playwright-java-13442967600156287285/package/lib/server/progress.js:78:26)<br>    at Frame.selectOption (/tmp/playwright-java-13442967600156287285/package/lib/server/frames.js:1181:23)<br>    at FrameDispatcher.selectOption (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/frameDispatcher.js:241:33)<br>    at FrameDispatcher._handleCommand (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:94:40)<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:361:39)<br>}<br>Call log:<br>- waiting for locator(&quot;internal:attr=[data-test=\&quot;sort\&quot;]&quot;)<br></span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-7"
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-7">
-            <div class="card">
-                <div class="card-header">
-                    <h4>com.microsoft.playwright.TimeoutError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)<br />com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)<br />com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)<br />com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)<br />com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)<br />com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:722)<br />com.microsoft.playwright.impl.FrameImpl.selectOptionImpl(FrameImpl.java:701)<br />com.microsoft.playwright.impl.FrameImpl.lambda$selectOption$2(FrameImpl.java:113)<br />com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)<br />com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)<br />com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:113)<br />com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:102)<br />com.microsoft.playwright.impl.LocatorImpl.selectOption(LocatorImpl.java:487)<br />com.microsoft.playwright.Locator.selectOption(Locator.java:4368)<br />com.playwright.toolshop.pages.LeftNavigationPage.selectSortBy(LeftNavigationPage.java:75)<br />com.playwright.toolshop.cucumber.stepdefinitions.ProductCatalogStepDefinitions.actorSortsBy(ProductCatalogStepDefinitions.java:78)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                        </td>
-                    </tr>
-                <tr class="test-SKIPPED">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="1-2"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-skip-forward skipped-icon ' title='SKIPPED'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -599,8 +609,8 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SKIPPED</span></td>
-                    <td width="100"><span class="nested-group-step"></span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">946ms</span></td>
                 </tr>
 
                             </table>
@@ -609,7 +619,7 @@
             <tr class="test-ERROR">
                     <td colspan="2"></td>
                 <td width="130"><span class="top-level-step"><em>ERROR</em></span></td>
-                <td width="100"><span class="top-level-step"><em>23.09s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>1.97s</em></span></td>
             </tr>
 
         </table>
