@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="com.playwright.toolshop.tests.product.MainPageTests" skipped="0" tests="1" time="10.67" timestamp="2026-08-13 09:21:09"><testcase classname="com.playwright.toolshop.tests.product.MainPageTests" name="Should update cart item count"><error message="Error {&#10;  message='Timeout 10000ms exceeded.&#10;  name='TimeoutError&#10;  stack='TimeoutError: Timeout 10000ms exceeded.&#10;    at ProgressController.run (/tmp/playwright-java-4010704664234096150/package/lib/server/progress.js:78:26)&#10;    at Frame.click (/tmp/playwright-java-4010704664234096150/package/lib/server/frames.js:1013:23)&#10;    at FrameDispatcher.click (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/frameDispatcher.js:157:30)&#10;    at FrameDispatcher._handleCommand (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:94:40)&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:361:39)&#10;}&#10;Call log:&#10;- waiting for getByText(&quot;Bolt Cutters&quot;)&#10;" type="com.microsoft.playwright.TimeoutError">Error {
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="com.playwright.toolshop.tests.product.MainPageTests" skipped="0" tests="1" time="10.71" timestamp="2026-08-13 09:49:31"><testcase classname="com.playwright.toolshop.tests.product.MainPageTests" name="Should update cart item count"><error message="Error {&#10;  message='Timeout 10000ms exceeded.&#10;  name='TimeoutError&#10;  stack='TimeoutError: Timeout 10000ms exceeded.&#10;    at ProgressController.run (/tmp/playwright-java-13442967600156287285/package/lib/server/progress.js:78:26)&#10;    at Frame.click (/tmp/playwright-java-13442967600156287285/package/lib/server/frames.js:1013:23)&#10;    at FrameDispatcher.click (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/frameDispatcher.js:157:30)&#10;    at FrameDispatcher._handleCommand (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:94:40)&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:361:39)&#10;}&#10;Call log:&#10;- waiting for getByText(&quot;Bolt Cutters&quot;)&#10;" type="com.microsoft.playwright.TimeoutError">Error {
   message='Timeout 10000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 10000ms exceeded.
-    at ProgressController.run (/tmp/playwright-java-4010704664234096150/package/lib/server/progress.js:78:26)
-    at Frame.click (/tmp/playwright-java-4010704664234096150/package/lib/server/frames.js:1013:23)
-    at FrameDispatcher.click (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/frameDispatcher.js:157:30)
-    at FrameDispatcher._handleCommand (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:361:39)
+    at ProgressController.run (/tmp/playwright-java-13442967600156287285/package/lib/server/progress.js:78:26)
+    at Frame.click (/tmp/playwright-java-13442967600156287285/package/lib/server/frames.js:1013:23)
+    at FrameDispatcher.click (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/frameDispatcher.js:157:30)
+    at FrameDispatcher._handleCommand (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:361:39)
 }
 Call log:
 - waiting for getByText("Bolt Cutters")
@@ -14,11 +14,11 @@ Call log:
   message='Timeout 10000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 10000ms exceeded.
-    at ProgressController.run (/tmp/playwright-java-4010704664234096150/package/lib/server/progress.js:78:26)
-    at Frame.click (/tmp/playwright-java-4010704664234096150/package/lib/server/frames.js:1013:23)
-    at FrameDispatcher.click (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/frameDispatcher.js:157:30)
-    at FrameDispatcher._handleCommand (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:361:39)
+    at ProgressController.run (/tmp/playwright-java-13442967600156287285/package/lib/server/progress.js:78:26)
+    at Frame.click (/tmp/playwright-java-13442967600156287285/package/lib/server/frames.js:1013:23)
+    at FrameDispatcher.click (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/frameDispatcher.js:157:30)
+    at FrameDispatcher._handleCommand (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/tmp/playwright-java-13442967600156287285/package/lib/server/dispatchers/dispatcher.js:361:39)
 }
 Call log:
 - waiting for getByText("Bolt Cutters")
