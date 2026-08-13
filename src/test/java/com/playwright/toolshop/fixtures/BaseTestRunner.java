@@ -1,6 +1,7 @@
 package com.playwright.toolshop.fixtures;
 
 import com.microsoft.playwright.*;
+import net.serenitybdd.playwright.PlaywrightSerenity;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +14,7 @@ import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
 import static com.playwright.toolshop.testresources.Resources.BROWSER_LAUNCH_OPTION;
 
 @ExtendWith(TestWatcherExtension.class)
-public abstract class BaseTestRunner extends Tracer implements TestWatcher, ScreenshotManager {
+public abstract class BaseTestRunner extends Tracer implements TestWatcher {
     protected static ThreadLocal<Playwright> playwright
             = ThreadLocal.withInitial(() -> {
                         Playwright playwright = Playwright.create();
@@ -51,6 +52,7 @@ public abstract class BaseTestRunner extends Tracer implements TestWatcher, Scre
         browserContext.setDefaultNavigationTimeout(10000);
         page = browserContext.newPage();
         page.setDefaultTimeout(10000);
+        PlaywrightSerenity.registerPage(page);
     }
 
 

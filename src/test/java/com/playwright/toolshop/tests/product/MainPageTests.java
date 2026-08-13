@@ -1,6 +1,5 @@
 package com.playwright.toolshop.tests.product;
 
-import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.HeadlessChromeOptions;
@@ -8,30 +7,28 @@ import com.playwright.toolshop.fixtures.BaseTestRunner;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.pages.ProductPage;
-import io.qameta.allure.Feature;
+import net.serenitybdd.annotations.Feature;
+import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.Comparator;
 
 import static com.playwright.toolshop.testresources.Resources.*;
 
+@ExtendWith(SerenityJUnit5Extension.class)
+@ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright(HeadlessChromeOptions.class)
 public class MainPageTests extends BaseTestRunner {
-    MainPage mainPage;
-    ProductPage productPage;
-    LeftNavigationPage leftNavigationPage;
-
+    @Steps MainPage mainPage;
+    @Steps ProductPage productPage;
+    @Steps LeftNavigationPage leftNavigationPage;
 
     @BeforeEach
     void openHomePage(){
         mainPage.navigate();
-    }
-
-    @BeforeEach
-    public void setUp(Page page){
-        mainPage = new MainPage(page);
-        productPage = new ProductPage(page);
-        leftNavigationPage = new LeftNavigationPage(page);
     }
 
 

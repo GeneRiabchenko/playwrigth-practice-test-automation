@@ -73,10 +73,10 @@ jobs:
           name: traces
           path: target/traces/*.zip
 
-      # Step 10: Deploy allure report to GitHub Pages
+      # Step 10: Deploy serenity report to GitHub Pages
       - name: Deploy allure report to Github Pages
         if: always() # Runs this step if tests failed
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: target/site/allure-maven-plugin
+          publish_dir: target/site/serenity

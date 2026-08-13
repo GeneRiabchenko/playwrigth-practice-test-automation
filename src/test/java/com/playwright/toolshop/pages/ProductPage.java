@@ -4,7 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.playwright.toolshop.utils.enums.Specs;
-import io.qameta.allure.Step;
+import net.serenitybdd.annotations.Step;
 
 import static com.playwright.toolshop.testresources.Resources.MAIN_URL;
 
@@ -42,7 +42,7 @@ public class ProductPage extends BasePage {
         ADD_TO_FAVORITES.click();
     }
 
-    @Step("Return value of the specification by name")
+    @Step("Return value of the {0} specification")
     public String getSpecValueByName(Specs specName){
         SPECIFICATIONS_TABLE.waitFor();
         return SPECIFICATIONS_ROWS

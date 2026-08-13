@@ -3,7 +3,7 @@ package com.playwright.toolshop.pages;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
-import io.qameta.allure.Step;
+import net.serenitybdd.annotations.Step;
 import org.junit.jupiter.api.Assertions;
 
 import java.nio.file.Path;

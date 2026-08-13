@@ -7,20 +7,27 @@ import com.playwright.toolshop.fixtures.BaseTestRunner;
 import com.playwright.toolshop.pages.LoginPage;
 import com.playwright.toolshop.utils.User;
 import com.playwright.toolshop.utils.UserAPIClient;
+import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+@ExtendWith(SerenityJUnit5Extension.class)
+@ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright(HeadlessChromeOptions.class)
 public class LoginPageTests extends BaseTestRunner {
+    @Steps
     LoginPage loginPage;
+
+    @Steps
     UserAPIClient userAPIClient;
 
     @BeforeEach
     public void setUp(Page page){
-        loginPage = new LoginPage(page);
         loginPage.navigate();
-        userAPIClient = new UserAPIClient(page);
     }
 
     @Test
