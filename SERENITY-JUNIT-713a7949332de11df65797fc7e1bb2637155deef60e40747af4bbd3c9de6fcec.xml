@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="com.playwright.toolshop.tests.api.ProductAPITests" skipped="0" tests="1" time="32.19" timestamp="2026-08-13 09:20:20"><testcase classname="com.playwright.toolshop.tests.api.ProductAPITests" name="Mock product request"><error message="Error {&#10;  message='Timeout 30000ms exceeded.&#10;  name='TimeoutError&#10;  stack='TimeoutError: Timeout 30000ms exceeded.&#10;    at ProgressController.run (/tmp/playwright-java-9237578816897252012/package/lib/server/progress.js:78:26)&#10;    at Frame.selectOption (/tmp/playwright-java-9237578816897252012/package/lib/server/frames.js:1181:23)&#10;    at FrameDispatcher.selectOption (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/frameDispatcher.js:241:33)&#10;    at FrameDispatcher._handleCommand (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:94:40)&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:361:39)&#10;}&#10;Call log:&#10;- waiting for locator(&quot;internal:attr=[data-test=\&quot;sort\&quot;]&quot;)&#10;" type="com.microsoft.playwright.TimeoutError">Error {
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="com.playwright.toolshop.tests.api.ProductAPITests" skipped="0" tests="1" time="33.5" timestamp="2026-08-13 09:19:48"><testcase classname="com.playwright.toolshop.tests.api.ProductAPITests" name="Mock product request"><error message="Error {&#10;  message='Timeout 30000ms exceeded.&#10;  name='TimeoutError&#10;  stack='TimeoutError: Timeout 30000ms exceeded.&#10;    at ProgressController.run (/tmp/playwright-java-4010704664234096150/package/lib/server/progress.js:78:26)&#10;    at Frame.selectOption (/tmp/playwright-java-4010704664234096150/package/lib/server/frames.js:1181:23)&#10;    at FrameDispatcher.selectOption (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/frameDispatcher.js:241:33)&#10;    at FrameDispatcher._handleCommand (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:94:40)&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:361:39)&#10;}&#10;Call log:&#10;- waiting for locator(&quot;internal:attr=[data-test=\&quot;sort\&quot;]&quot;)&#10;" type="com.microsoft.playwright.TimeoutError">Error {
   message='Timeout 30000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (/tmp/playwright-java-9237578816897252012/package/lib/server/progress.js:78:26)
-    at Frame.selectOption (/tmp/playwright-java-9237578816897252012/package/lib/server/frames.js:1181:23)
-    at FrameDispatcher.selectOption (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/frameDispatcher.js:241:33)
-    at FrameDispatcher._handleCommand (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:361:39)
+    at ProgressController.run (/tmp/playwright-java-4010704664234096150/package/lib/server/progress.js:78:26)
+    at Frame.selectOption (/tmp/playwright-java-4010704664234096150/package/lib/server/frames.js:1181:23)
+    at FrameDispatcher.selectOption (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/frameDispatcher.js:241:33)
+    at FrameDispatcher._handleCommand (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:361:39)
 }
 Call log:
 - waiting for locator("internal:attr=[data-test=\"sort\"]")
@@ -14,11 +14,11 @@ Call log:
   message='Timeout 30000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (/tmp/playwright-java-9237578816897252012/package/lib/server/progress.js:78:26)
-    at Frame.selectOption (/tmp/playwright-java-9237578816897252012/package/lib/server/frames.js:1181:23)
-    at FrameDispatcher.selectOption (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/frameDispatcher.js:241:33)
-    at FrameDispatcher._handleCommand (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:361:39)
+    at ProgressController.run (/tmp/playwright-java-4010704664234096150/package/lib/server/progress.js:78:26)
+    at Frame.selectOption (/tmp/playwright-java-4010704664234096150/package/lib/server/frames.js:1181:23)
+    at FrameDispatcher.selectOption (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/frameDispatcher.js:241:33)
+    at FrameDispatcher._handleCommand (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/tmp/playwright-java-4010704664234096150/package/lib/server/dispatchers/dispatcher.js:361:39)
 }
 Call log:
 - waiting for locator("internal:attr=[data-test=\"sort\"]")

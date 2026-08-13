@@ -202,9 +202,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">
+                                <span class="error-color">
                                     Valid user should be created via API
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -244,10 +244,57 @@
                 <td colspan="5"></td>
             </tr>
 
-            <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
+                    <td width="40"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a></td>
+                    <td width="%" colspan="1">
+                            <span class="top-level-step">Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null</span>
+                    </td>
+                    <td width="130"><span
+                                class="top-level-step">ERROR</span>
+                    </td>
+                    <td width="100"><span class="top-level-step">1.41s</span></td>
+                </tr>
+                <tr class="test-ERROR">
+                    <td width="40">&nbsp</td>
+                    <td width="%" colspan="3">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Cannot invoke 'com.google.gson.JsonElement.getAsString()' because the return value of 'com.google.gson.JsonObject.get(String)' is null</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.NullPointerException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.playwright.toolshop.tests.contact.ContactAPITest.lambda$validUserIsCreated$0(ContactAPITest.java:70)<br />com.playwright.toolshop.tests.contact.ContactAPITest.validUserIsCreated(ContactAPITest.java:60)<br />net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension.interceptTestMethod(SerenityPlaywrightExtension.java:150)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    </td>
+                </tr>
+            <tr class="test-ERROR">
                     <td colspan="2"></td>
-                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>1.85s</em></span></td>
+                <td width="130"><span class="top-level-step"><em>ERROR</em></span></td>
+                <td width="100"><span class="top-level-step"><em>1.41s</em></span></td>
             </tr>
 
         </table>
