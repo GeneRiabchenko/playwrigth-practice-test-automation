@@ -69,6 +69,11 @@ Parallel execution is enabled for both JUnit (`junit-platform.properties`, fixed
 ## Conventions worth knowing
 
 - New browser-driving tests should extend `BaseTestRunner` (or `BaseAPITestRunner` for API-only flows), and always carry `@ExtendWith(SerenityJUnit5Extension.class)`, `@ExtendWith(SerenityPlaywrightExtension.class)`, `@UsePlaywright(HeadlessChromeOptions.class)` — copy this trio from an existing test class (e.g. `LoginPageTests`).
-- Locators should prefer `data-test` attributes (`page.getByTestId(...)`) to match how this app's test IDs are exposed, consistent with the global `setTestIdAttribute("data-test")`.
+- Locators should prefer `data-test` attributes (`page.getByTestId(...)`) to match how this app's test IDs are exposed, consistent with the global `setTestIdAttribute("data-test")`. Don't use css or xpath selectors
 - Page-object action/assertion methods should be annotated `@Step("...")` so they render meaningfully in the Serenity report.
 - Cucumber step definitions belong in `cucumber/stepdefinitions/`; new `.feature` files go in `src/test/resources/features/` and are auto-discovered by `CucumberTests` (`@SelectClasspathResource("features")`).
+- Tests should be grouped by @Nested classes for logical structure
+
+## Methodology
+- Outside-ib: write the test first, then the page object
+- One tests at a time - never batch-generate

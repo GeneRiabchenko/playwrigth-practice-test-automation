@@ -21,10 +21,6 @@ public abstract class BasePage {
         page.getByText(textElement).click();
     }
 
-    public Locator getElementByText(String textElement){
-        return page.getByText(textElement);
-    }
-
     @Step("Click on element with alt text")
     public void clickElementByAltText(String textElement){
         page.getByAltText(textElement).click();
