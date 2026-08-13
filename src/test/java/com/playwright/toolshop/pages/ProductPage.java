@@ -16,6 +16,10 @@ public class ProductPage extends BasePage {
     private final Locator ADD_TO_FAVORITES;
     private final Locator SPECIFICATIONS_TABLE;
     private final Locator SPECIFICATIONS_ROWS;
+    private final Locator QUANTITY_INPUT;
+    private final Locator INCREASE_QUANTITY_BUTTON;
+    private final Locator DECREASE_QUANTITY_BUTTON;
+    private final Locator TOASTER_MESSAGE;
 
     public ProductPage(Page page) {
         super(page);
@@ -24,6 +28,10 @@ public class ProductPage extends BasePage {
         this.ADD_TO_FAVORITES = page.getByTestId("add-to-favorites");
         this.SPECIFICATIONS_TABLE = page.getByTestId("product-specs");
         this.SPECIFICATIONS_ROWS = page.getByTestId("spec-row");
+        this.QUANTITY_INPUT = page.getByTestId("quantity");
+        this.INCREASE_QUANTITY_BUTTON = page.getByTestId("increase-quantity");
+        this.DECREASE_QUANTITY_BUTTON = page.getByTestId("decrease-quantity");
+        this.TOASTER_MESSAGE = page.locator(".toast-message");
     }
 
     @Override
@@ -35,11 +43,27 @@ public class ProductPage extends BasePage {
     @Step("Click on the cart icon to add product to the cart")
     public void addToCart(){
         ADD_TO_CART_BUTTON.click();
+        page.waitForCondition(TOASTER_MESSAGE::isVisible);
     }
 
     @Step("Click on the favorites icon to add product to favorites")
     public void addToFavorites(){
         ADD_TO_FAVORITES.click();
+    }
+
+    @Step("Increase product quantity")
+    public void increaseQuantity(){
+        INCREASE_QUANTITY_BUTTON.click();
+    }
+
+    @Step("Decrease product quantity")
+    public void decreaseQuantity(){
+        DECREASE_QUANTITY_BUTTON.click();
+    }
+
+    @Step("Return current quantity value")
+    public String getQuantity(){
+        return QUANTITY_INPUT.inputValue();
     }
 
     @Step("Return value of the {0} specification")

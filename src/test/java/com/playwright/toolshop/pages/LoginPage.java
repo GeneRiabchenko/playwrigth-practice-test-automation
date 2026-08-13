@@ -51,4 +51,10 @@ public class LoginPage extends BasePage {
         return PAGE_TITLE.innerText();
     }
 
+    @Step("Check that the login form is visible")
+    public boolean isLoginFormVisible() {
+        EMAIl_ADDRESS_FIELD.waitFor();
+        return EMAIl_ADDRESS_FIELD.isVisible();
+    }
+
 }

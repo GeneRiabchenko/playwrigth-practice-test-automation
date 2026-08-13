@@ -23,10 +23,10 @@ public class MainPage extends BasePage {
     protected final Locator BADGE_LOCATOR;
     protected final Locator PRODUCT_NAME;
     protected final Locator PRODUCT_PRICE;
-    protected final Locator OUT_OF_STOCK;
     protected final Locator CARD_IMAGES;
     protected final Locator NAV_CATEGORIES;
     protected final Locator NAV_HAND_TOOLS;
+    protected final Locator NAV_HOME;
     protected final Locator TOASTER_CONTAINER;
     protected final Locator TOASTER_MESSAGE;
     protected final Locator CART_QUANTITY;
@@ -45,10 +45,10 @@ public class MainPage extends BasePage {
         this.BADGE_LOCATOR = page.locator(".badge");
         this.PRODUCT_NAME = page.getByTestId("product-name");
         this.PRODUCT_PRICE = page.getByTestId("product-price");
-        this.OUT_OF_STOCK = page.getByTestId("out-of-stock");
         this.CARD_IMAGES = page.locator(".card-img-top");
         this.NAV_CATEGORIES = page.getByTestId("nav-categories");
         this.NAV_HAND_TOOLS = page.getByTestId("nav-hand-tools");
+        this.NAV_HOME = page.getByTestId("nav-home");
         this.TOASTER_CONTAINER = page.getByTestId("toast-container");
         this.TOASTER_MESSAGE = page.locator(".toast-message");
         this.CART_QUANTITY = page.getByTestId("cart-quantity");
@@ -65,10 +65,16 @@ public class MainPage extends BasePage {
         return MAIN_URL;
     }
 
+    @Step("Click on the home nav link")
+    public void clickHomeLink(){
+        NAV_HOME.click();
+        page.waitForCondition(PRODUCT_CONTAINER.first()::isVisible);
+    }
+
     @Step("Return out of stock product names")
     public List<String> getOutOfStockItems(){
         return CARD_LOCATOR.
-                filter(new Locator.FilterOptions().setHas(OUT_OF_STOCK)).
+                filter(new Locator.FilterOptions().setHas(page.getByTestId("out-of-stock"))).
                 getByTestId("product-name").
                 allInnerTexts();
     }
@@ -163,6 +169,9 @@ public class MainPage extends BasePage {
     @Step("Click on the {0} product")
     public void openProductByName(String name){
         PRODUCT_NAME.getByText(name, new Locator.GetByTextOptions().setExact(true)).click();
+        page.waitForURL("**/product/**");
+        Locator productTitle = page.getByTestId("product-name");
+        page.waitForCondition(() -> productTitle.innerText().strip().equals(name));
     }
 
     @Step("Return the title of the page")

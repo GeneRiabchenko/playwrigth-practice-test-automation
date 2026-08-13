@@ -7,10 +7,14 @@ public class Resources {
     public static String BASE_API_URL = "https://api.practicesoftwaretesting.com/";
     public static String CONTACTS_URL = String.format("%scontact", MAIN_URL);
     public static String SIGN_IN_URL = String.format("%sauth/login", MAIN_URL);
+    public static String CART_URL = String.format("%scheckout", MAIN_URL);
     public static String SAMPLE_FILE_URI = "C:/Users/Jeka/IdeaProjects/Playwright/src/test/java/com/playwright/toolshop/testresources/data/sample-data.txt";
 
     public static String PRODUCTS_REQUEST_URL_WITH_PARAMETERS = "**/products?**";
     public static String PRODUCTS_REQUEST_URL = "**/products";
+    public static String SEARCH_REQUEST_URL = "**/products/search**";
+    public static String CART_REQUEST_URL = "**/carts/**";
+    public static String QUANTITY_URL = "**/quantity";
 
     public static List<String> BROWSER_LAUNCH_OPTION = Arrays.asList(
             "--no-sandbox",

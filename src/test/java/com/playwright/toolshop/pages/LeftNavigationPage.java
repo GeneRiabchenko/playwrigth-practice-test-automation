@@ -7,8 +7,7 @@ import net.serenitybdd.annotations.Step;
 
 import java.util.List;
 
-import static com.playwright.toolshop.testresources.Resources.MAIN_URL;
-import static com.playwright.toolshop.testresources.Resources.PRODUCTS_REQUEST_URL;
+import static com.playwright.toolshop.testresources.Resources.*;
 
 public class LeftNavigationPage extends MainPage {
     private final Page page;
@@ -57,9 +56,12 @@ public class LeftNavigationPage extends MainPage {
     public void search(String searchString){
         SEARCH_INPUT.clear();
         SEARCH_INPUT.fill(searchString);
-        SEARCH_BUTTON.click();
         if (searchString != null && !searchString.isEmpty()) {
-            page.waitForCondition(SEARCH_FINISHED_STATE::isVisible);
+            int previousCount = CARD_LOCATOR.count();
+            page.waitForResponse(SEARCH_REQUEST_URL, SEARCH_BUTTON::click);
+            page.waitForCondition(() -> CARD_LOCATOR.count() != previousCount);
+        } else {
+            SEARCH_BUTTON.click();
         }
     }
 
