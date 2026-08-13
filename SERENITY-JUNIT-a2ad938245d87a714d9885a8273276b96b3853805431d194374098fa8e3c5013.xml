@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="com.playwright.toolshop.tests.search.SearchTests" skipped="0" tests="1" time="11.04" timestamp="2026-08-13 09:17:17"><testcase classname="com.playwright.toolshop.tests.search.SearchTests" name="Check that no results are shown when search doesn't match with any product"><error message="Error {&#10;  message='Timeout 10000ms exceeded.&#10;  name='TimeoutError&#10;  stack='TimeoutError: Timeout 10000ms exceeded.&#10;    at ProgressController.run (/tmp/playwright-java-11228615496187193837/package/lib/server/progress.js:78:26)&#10;    at Frame.fill (/tmp/playwright-java-11228615496187193837/package/lib/server/frames.js:1063:23)&#10;    at FrameDispatcher.fill (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/frameDispatcher.js:169:30)&#10;    at FrameDispatcher._handleCommand (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/dispatcher.js:94:40)&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/dispatcher.js:361:39)&#10;}&#10;Call log:&#10;- waiting for locator(&quot;internal:attr=[data-test=\&quot;search-query\&quot;]&quot;)&#10;" type="com.microsoft.playwright.TimeoutError">Error {
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="com.playwright.toolshop.tests.search.SearchTests" skipped="0" tests="1" time="11.03" timestamp="2026-08-13 09:20:05"><testcase classname="com.playwright.toolshop.tests.search.SearchTests" name="Check that no results are shown when search doesn't match with any product"><error message="Error {&#10;  message='Timeout 10000ms exceeded.&#10;  name='TimeoutError&#10;  stack='TimeoutError: Timeout 10000ms exceeded.&#10;    at ProgressController.run (/tmp/playwright-java-9237578816897252012/package/lib/server/progress.js:78:26)&#10;    at Frame.fill (/tmp/playwright-java-9237578816897252012/package/lib/server/frames.js:1063:23)&#10;    at FrameDispatcher.fill (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/frameDispatcher.js:169:30)&#10;    at FrameDispatcher._handleCommand (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:94:40)&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:361:39)&#10;}&#10;Call log:&#10;- waiting for locator(&quot;internal:attr=[data-test=\&quot;search-query\&quot;]&quot;)&#10;" type="com.microsoft.playwright.TimeoutError">Error {
   message='Timeout 10000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 10000ms exceeded.
-    at ProgressController.run (/tmp/playwright-java-11228615496187193837/package/lib/server/progress.js:78:26)
-    at Frame.fill (/tmp/playwright-java-11228615496187193837/package/lib/server/frames.js:1063:23)
-    at FrameDispatcher.fill (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/frameDispatcher.js:169:30)
-    at FrameDispatcher._handleCommand (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/dispatcher.js:361:39)
+    at ProgressController.run (/tmp/playwright-java-9237578816897252012/package/lib/server/progress.js:78:26)
+    at Frame.fill (/tmp/playwright-java-9237578816897252012/package/lib/server/frames.js:1063:23)
+    at FrameDispatcher.fill (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/frameDispatcher.js:169:30)
+    at FrameDispatcher._handleCommand (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:361:39)
 }
 Call log:
 - waiting for locator("internal:attr=[data-test=\"search-query\"]")
@@ -14,11 +14,11 @@ Call log:
   message='Timeout 10000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 10000ms exceeded.
-    at ProgressController.run (/tmp/playwright-java-11228615496187193837/package/lib/server/progress.js:78:26)
-    at Frame.fill (/tmp/playwright-java-11228615496187193837/package/lib/server/frames.js:1063:23)
-    at FrameDispatcher.fill (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/frameDispatcher.js:169:30)
-    at FrameDispatcher._handleCommand (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (/tmp/playwright-java-11228615496187193837/package/lib/server/dispatchers/dispatcher.js:361:39)
+    at ProgressController.run (/tmp/playwright-java-9237578816897252012/package/lib/server/progress.js:78:26)
+    at Frame.fill (/tmp/playwright-java-9237578816897252012/package/lib/server/frames.js:1063:23)
+    at FrameDispatcher.fill (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/frameDispatcher.js:169:30)
+    at FrameDispatcher._handleCommand (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/tmp/playwright-java-9237578816897252012/package/lib/server/dispatchers/dispatcher.js:361:39)
 }
 Call log:
 - waiting for locator("internal:attr=[data-test=\"search-query\"]")
