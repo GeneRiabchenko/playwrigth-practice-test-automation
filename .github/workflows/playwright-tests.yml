@@ -74,7 +74,7 @@ jobs:
           path: target/traces/*.zip
 
       # Step 10: Deploy serenity report to GitHub Pages
-      - name: Deploy allure report to Github Pages
+      - name: Deploy serenity report to Github Pages
         if: always() # Runs this step if tests failed
         uses: peaceiris/actions-gh-pages@v4
         with:
