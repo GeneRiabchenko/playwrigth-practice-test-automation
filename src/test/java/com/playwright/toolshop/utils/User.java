@@ -27,5 +27,4 @@ public record User(
         String dob,
         String password,
         String email
-) {
-}
+) {}
