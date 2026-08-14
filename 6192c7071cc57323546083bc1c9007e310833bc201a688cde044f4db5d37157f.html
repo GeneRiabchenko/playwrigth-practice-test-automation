@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Phone number +1 555-123-4567 should be rejected</title>
+    <title>Formatted phone numbers should be rejected</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -126,7 +126,7 @@
             Registration
         </a>
         >
-            Phone number +1 555-123-4567 should be rejected
+            Formatted phone numbers should be rejected
         </span>
         </div>
         <div class="rightbg"></div>
@@ -193,7 +193,7 @@
                             <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
                                 <span class="error-color">
-                                    Phone number +1 555-123-4567 should be rejected
+                                    Formatted phone numbers should be rejected
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -214,6 +214,56 @@
 
 <div id="beforetable"></div>
 
+
+        <h3 class="story-header">Examples:&nbsp;</h3>
+            <div class="requirementNarrative"></div>
+
+
+            <p class="example-tag">
+            </p>
+
+        <div class="example-table test-report">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                        <th>Phone</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="test-ERROR"><a href="#0">1</a></td>
+                            <td class="test-ERROR"><a
+                                        href="#0">+1 555-123-4567</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-ERROR"><a href="#1">2</a></td>
+                            <td class="test-ERROR"><a
+                                        href="#1">(555) 123-4567</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-ERROR"><a href="#2">3</a></td>
+                            <td class="test-ERROR"><a
+                                        href="#2">555-123-4567</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-ERROR"><a href="#3">4</a></td>
+                            <td class="test-ERROR"><a
+                                        href="#3">+15551234567</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-ERROR"><a href="#4">5</a></td>
+                            <td class="test-ERROR"><a
+                                        href="#4">555 123 4567</a>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
 <div id="tablecontents">
     <div>
@@ -252,7 +302,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">ERROR</span></td>
-                    <td width="100"><span class="top-level-step">790ms</span></td>
+                    <td width="100"><span class="top-level-step"></span></td>
                 </tr>
                     <tr class="test-ERROR">
                         <td width="40">&nbsp</td>
@@ -263,7 +313,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">com.microsoft.playwright.impl.TargetClosedError: Error {<br>  message=&#39;Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>  name=&#39;TargetClosedError<br>  stack=&#39;TargetClosedError: Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-6644365151734012322/package/lib/server/dispatchers/dispatcher.js:375:15)<br>}<br>Call log:<br>- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-JNwy0y --remote-debugging-pipe --no-startup-window<br>- &lt;launched&gt; pid=7214<br>- [pid=7214][err] [7214:7214:0814/104400.643702:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY<br>- [pid=7214][err] [7214:7214:0814/104400.643738:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.<br></span>
+                    <span class="error-message error-message-title">com.microsoft.playwright.impl.TargetClosedError: Error {<br>  message=&#39;Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>  name=&#39;TargetClosedError<br>  stack=&#39;TargetClosedError: Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-13095593212817426032/package/lib/server/dispatchers/dispatcher.js:375:15)<br>}<br>Call log:<br>- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-McepSR --remote-debugging-pipe --no-startup-window<br>- &lt;launched&gt; pid=10161<br>- [pid=10161][err] [10161:10161:0814/104414.111462:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY<br>- [pid=10161][err] [10161:10161:0814/104414.111494:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.<br></span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-1"
@@ -277,6 +327,246 @@
     <div class="row stacktrace-details">
       <div class="col">
         <div class="collapse multi-collapse" id="stacktraceModal-1">
+            <div class="card">
+                <div class="card-header">
+                    <h4>com.microsoft.playwright.impl.TargetClosedError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)<br />com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)<br />com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)<br />com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)<br />com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)<br />com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)<br />com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)<br />com.microsoft.playwright.impl.junit.BrowserExtension.getOrCreateBrowser(BrowserExtension.java:82)<br />com.microsoft.playwright.impl.junit.BrowserContextExtension.getOrCreateBrowserContext(BrowserContextExtension.java:61)<br />com.microsoft.playwright.impl.junit.BrowserContextExtension.resolveParameter(BrowserContextExtension.java:42)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
+                <tr class="test-ERROR">
+
+                    <td width="50" class="step-icon">
+                        <a name="1"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                Phone number (555) 123-4567 should be rejected
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step"></span></td>
+                </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">com.microsoft.playwright.impl.TargetClosedError: Error {<br>  message=&#39;Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>  name=&#39;TargetClosedError<br>  stack=&#39;TargetClosedError: Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-13095593212817426032/package/lib/server/dispatchers/dispatcher.js:375:15)<br>}<br>Call log:<br>- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-rawkf2 --remote-debugging-pipe --no-startup-window<br>- &lt;launched&gt; pid=10340<br>- [pid=10340][err] [10340:10340:0814/104414.629826:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY<br>- [pid=10340][err] [10340:10340:0814/104414.629867:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.<br></span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-2"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-2">
+            <div class="card">
+                <div class="card-header">
+                    <h4>com.microsoft.playwright.impl.TargetClosedError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)<br />com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)<br />com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)<br />com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)<br />com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)<br />com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)<br />com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)<br />com.microsoft.playwright.impl.junit.BrowserExtension.getOrCreateBrowser(BrowserExtension.java:82)<br />com.microsoft.playwright.impl.junit.BrowserContextExtension.getOrCreateBrowserContext(BrowserContextExtension.java:61)<br />com.microsoft.playwright.impl.junit.BrowserContextExtension.resolveParameter(BrowserContextExtension.java:42)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
+                <tr class="test-ERROR">
+
+                    <td width="50" class="step-icon">
+                        <a name="2"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                Phone number 555-123-4567 should be rejected
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step"></span></td>
+                </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">com.microsoft.playwright.impl.TargetClosedError: Error {<br>  message=&#39;Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>  name=&#39;TargetClosedError<br>  stack=&#39;TargetClosedError: Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-13095593212817426032/package/lib/server/dispatchers/dispatcher.js:375:15)<br>}<br>Call log:<br>- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-k46F3i --remote-debugging-pipe --no-startup-window<br>- &lt;launched&gt; pid=10496<br>- [pid=10496][err] [10496:10496:0814/104415.083717:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY<br>- [pid=10496][err] [10496:10496:0814/104415.083758:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.<br></span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-3"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4>com.microsoft.playwright.impl.TargetClosedError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)<br />com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)<br />com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)<br />com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)<br />com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)<br />com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)<br />com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)<br />com.microsoft.playwright.impl.junit.BrowserExtension.getOrCreateBrowser(BrowserExtension.java:82)<br />com.microsoft.playwright.impl.junit.BrowserContextExtension.getOrCreateBrowserContext(BrowserContextExtension.java:61)<br />com.microsoft.playwright.impl.junit.BrowserContextExtension.resolveParameter(BrowserContextExtension.java:42)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
+                <tr class="test-ERROR">
+
+                    <td width="50" class="step-icon">
+                        <a name="3"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                Phone number +15551234567 should be rejected
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step"></span></td>
+                </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">com.microsoft.playwright.impl.TargetClosedError: Error {<br>  message=&#39;Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>  name=&#39;TargetClosedError<br>  stack=&#39;TargetClosedError: Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-13095593212817426032/package/lib/server/dispatchers/dispatcher.js:375:15)<br>}<br>Call log:<br>- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-orpjDY --remote-debugging-pipe --no-startup-window<br>- &lt;launched&gt; pid=10031<br>- [pid=10031][err] [10031:10031:0814/104413.679551:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY<br>- [pid=10031][err] [10031:10031:0814/104413.679588:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.<br></span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-4"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>com.microsoft.playwright.impl.TargetClosedError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)<br />com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)<br />com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)<br />com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)<br />com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)<br />com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)<br />com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)<br />com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)<br />com.microsoft.playwright.impl.junit.BrowserExtension.getOrCreateBrowser(BrowserExtension.java:82)<br />com.microsoft.playwright.impl.junit.BrowserContextExtension.getOrCreateBrowserContext(BrowserContextExtension.java:61)<br />com.microsoft.playwright.impl.junit.BrowserContextExtension.resolveParameter(BrowserContextExtension.java:42)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
+                <tr class="test-ERROR">
+
+                    <td width="50" class="step-icon">
+                        <a name="4"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                Phone number 555 123 4567 should be rejected
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step"></span></td>
+                </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">com.microsoft.playwright.impl.TargetClosedError: Error {<br>  message=&#39;Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>  name=&#39;TargetClosedError<br>  stack=&#39;TargetClosedError: Target page, context or browser has been closed<br>Browser logs:<br><br>╔════════════════════════════════════════════════════════════════════════════════════════════════╗<br>║ Looks like you launched a headed browser without having a XServer running.                     ║<br>║ Set either &#39;headless: true&#39; or use &#39;xvfb-run &lt;your-playwright-app&gt;&#39; before running Playwright. ║<br>║                                                                                                ║<br>║ &lt;3 Playwright Team                                                                             ║<br>╚════════════════════════════════════════════════════════════════════════════════════════════════╝<br>    at DispatcherConnection.dispatch (/tmp/playwright-java-13095593212817426032/package/lib/server/dispatchers/dispatcher.js:375:15)<br>}<br>Call log:<br>- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-Vy84sV --remote-debugging-pipe --no-startup-window<br>- &lt;launched&gt; pid=9849<br>- [pid=9849][err] [9849:9849:0814/104413.121627:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY<br>- [pid=9849][err] [9849:9849:0814/104413.121911:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.<br></span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-5"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-5">
             <div class="card">
                 <div class="card-header">
                     <h4>com.microsoft.playwright.impl.TargetClosedError </h4>
