@@ -8,8 +8,8 @@ import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.RequestOptions;
-import com.playwright.toolshop.utils.Address;
 import com.playwright.toolshop.utils.User;
+import com.playwright.toolshop.utils.UserBuilder;
 import net.serenitybdd.annotations.Feature;
 import net.serenitybdd.annotations.Story;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
@@ -50,7 +50,7 @@ public class ContactAPITest {
     @DisplayName("Valid user should be created via API")
     void validUserIsCreated(){
         Gson gson = new Gson();
-        User validUser = User.randomUser();
+        User validUser = UserBuilder.aUser().build();
 
         var response = createUser(validUser);
         String responseBody = response.text();
@@ -63,7 +63,7 @@ public class ContactAPITest {
                     .isEqualTo(201);
             softly.assertThat(createdUser)
                     .as("Created user should match specified user without the password")
-                    .isEqualTo(validUser.withPassword(null));
+                    .isEqualTo(UserBuilder.from(validUser).withPassword(null).build());
             softly.assertThat(responseObject.has("password"))
                     .as("Password is not returned in the response")
                     .isFalse();
@@ -79,15 +79,14 @@ public class ContactAPITest {
     @Test
     @DisplayName("First name field is mandatory for user creation via API")
     void firstNameIsMandatory(){
-        User userWithNoName = new User(
-                null,
-                "Jordan",
-                Address.randomAddress(),
-                "0994355787",
-                "1986-05-23",
-                "SESROCC12345!!!",
-                "someEmail@mail.com"
-        );
+        User userWithNoName = UserBuilder.aUser()
+                .withFirstName(null)
+                .withLastName("Jordan")
+                .withPhone("0994355787")
+                .withDob("1986-05-23")
+                .withPassword("SESROCC12345!!!")
+                .withEmail("someEmail@mail.com")
+                .build();
 
         Gson gson = new Gson();
         var response = createUser(userWithNoName);
