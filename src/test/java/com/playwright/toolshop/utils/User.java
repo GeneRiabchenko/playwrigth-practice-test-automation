@@ -49,7 +49,7 @@ public record User(
                 fake.name().firstName(),
                 fake.name().lastName(),
                 address,
-                fake.phoneNumber().cellPhone(),
+                fake.number().digits(10),
                 formattedDate,
                 USER_PASSWORD,
                 fake.internet().emailAddress()
