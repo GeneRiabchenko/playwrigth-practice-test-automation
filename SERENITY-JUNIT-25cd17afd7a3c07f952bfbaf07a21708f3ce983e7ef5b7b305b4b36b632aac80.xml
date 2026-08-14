@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="7" failures="0" name="Shopping Cart" skipped="0" tests="7" time="2.85" timestamp="2026-08-14 11:57:52"><testcase name="Actor adds a single product to the cart"><error message="Error {&#10;  message='Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;  name='TargetClosedError&#10;  stack='TargetClosedError: Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)&#10;}&#10;Call log:&#10;- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-F2t4l6 --remote-debugging-pipe --no-startup-window&#10;- &lt;launched&gt; pid=8115&#10;- [pid=8115][err] [8115:8115:0814/115753.465145:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY&#10;- [pid=8115][err] [8115:8115:0814/115753.465176:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.&#10;" type="com.microsoft.playwright.impl.TargetClosedError">Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-F2t4l6 --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8115
+- [pid=8115][err] [8115:8115:0814/115753.465145:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8115][err] [8115:8115:0814/115753.465176:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+</error><system-err>Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-F2t4l6 --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8115
+- [pid=8115][err] [8115:8115:0814/115753.465145:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8115][err] [8115:8115:0814/115753.465176:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+
+com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)
+com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)
+</system-err></testcase><testcase name="Actor adds multiple different products to the cart"><error message="Error {&#10;  message='Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;  name='TargetClosedError&#10;  stack='TargetClosedError: Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)&#10;}&#10;Call log:&#10;- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-xEigOk --remote-debugging-pipe --no-startup-window&#10;- &lt;launched&gt; pid=8101&#10;- [pid=8101][err] [8101:8101:0814/115753.480744:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY&#10;- [pid=8101][err] [8101:8101:0814/115753.480776:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.&#10;" type="com.microsoft.playwright.impl.TargetClosedError">Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-xEigOk --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8101
+- [pid=8101][err] [8101:8101:0814/115753.480744:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8101][err] [8101:8101:0814/115753.480776:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+</error><system-err>Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-xEigOk --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8101
+- [pid=8101][err] [8101:8101:0814/115753.480744:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8101][err] [8101:8101:0814/115753.480776:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+
+com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)
+com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)
+</system-err></testcase><testcase name="Actor proceeds to checkout as a guest"><error message="Error {&#10;  message='Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;  name='TargetClosedError&#10;  stack='TargetClosedError: Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)&#10;}&#10;Call log:&#10;- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-BYywlj --remote-debugging-pipe --no-startup-window&#10;- &lt;launched&gt; pid=8110&#10;- [pid=8110][err] [8110:8110:0814/115753.507808:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY&#10;- [pid=8110][err] [8110:8110:0814/115753.508557:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.&#10;" type="com.microsoft.playwright.impl.TargetClosedError">Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-BYywlj --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8110
+- [pid=8110][err] [8110:8110:0814/115753.507808:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8110][err] [8110:8110:0814/115753.508557:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+</error><system-err>Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-BYywlj --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8110
+- [pid=8110][err] [8110:8110:0814/115753.507808:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8110][err] [8110:8110:0814/115753.508557:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+
+com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)
+com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)
+</system-err></testcase><testcase name="Actor continues shopping from the cart"><error message="Error {&#10;  message='Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;  name='TargetClosedError&#10;  stack='TargetClosedError: Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)&#10;}&#10;Call log:&#10;- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-C5c8en --remote-debugging-pipe --no-startup-window&#10;- &lt;launched&gt; pid=8200&#10;- [pid=8200][err] [8200:8200:0814/115753.812187:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY&#10;- [pid=8200][err] [8200:8200:0814/115753.812220:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.&#10;" type="com.microsoft.playwright.impl.TargetClosedError">Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-C5c8en --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8200
+- [pid=8200][err] [8200:8200:0814/115753.812187:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8200][err] [8200:8200:0814/115753.812220:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+</error><system-err>Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-C5c8en --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8200
+- [pid=8200][err] [8200:8200:0814/115753.812187:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8200][err] [8200:8200:0814/115753.812220:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+
+com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)
+com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)
+</system-err></testcase><testcase name="Actor increases the quantity of a product in the cart"><error message="Error {&#10;  message='Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;  name='TargetClosedError&#10;  stack='TargetClosedError: Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)&#10;}&#10;Call log:&#10;- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-27dDSe --remote-debugging-pipe --no-startup-window&#10;- &lt;launched&gt; pid=8198&#10;- [pid=8198][err] [8198:8198:0814/115753.799506:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY&#10;- [pid=8198][err] [8198:8198:0814/115753.799961:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.&#10;" type="com.microsoft.playwright.impl.TargetClosedError">Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-27dDSe --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8198
+- [pid=8198][err] [8198:8198:0814/115753.799506:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8198][err] [8198:8198:0814/115753.799961:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+</error><system-err>Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-27dDSe --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8198
+- [pid=8198][err] [8198:8198:0814/115753.799506:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8198][err] [8198:8198:0814/115753.799961:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+
+com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)
+com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)
+</system-err></testcase><testcase name="Actor removes the only product from the cart"><error message="Error {&#10;  message='Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;  name='TargetClosedError&#10;  stack='TargetClosedError: Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)&#10;}&#10;Call log:&#10;- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-zGDJEB --remote-debugging-pipe --no-startup-window&#10;- &lt;launched&gt; pid=8282&#10;- [pid=8282][err] [8282:8282:0814/115754.041680:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY&#10;- [pid=8282][err] [8282:8282:0814/115754.042471:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.&#10;" type="com.microsoft.playwright.impl.TargetClosedError">Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-zGDJEB --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8282
+- [pid=8282][err] [8282:8282:0814/115754.041680:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8282][err] [8282:8282:0814/115754.042471:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+</error><system-err>Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-zGDJEB --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8282
+- [pid=8282][err] [8282:8282:0814/115754.041680:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8282][err] [8282:8282:0814/115754.042471:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+
+com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)
+com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)
+</system-err></testcase><testcase name="Actor removes one product and keeps the others"><error message="Error {&#10;  message='Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;  name='TargetClosedError&#10;  stack='TargetClosedError: Target page, context or browser has been closed&#10;Browser logs:&#10;&#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)&#10;}&#10;Call log:&#10;- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-Q0ZiMM --remote-debugging-pipe --no-startup-window&#10;- &lt;launched&gt; pid=8281&#10;- [pid=8281][err] [8281:8281:0814/115754.071613:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY&#10;- [pid=8281][err] [8281:8281:0814/115754.071648:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.&#10;" type="com.microsoft.playwright.impl.TargetClosedError">Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-Q0ZiMM --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8281
+- [pid=8281][err] [8281:8281:0814/115754.071613:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8281][err] [8281:8281:0814/115754.071648:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+</error><system-err>Error {
+  message='Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+    at DispatcherConnection.dispatch (/tmp/playwright-java-5509331497912049209/package/lib/server/dispatchers/dispatcher.js:375:15)
+}
+Call log:
+- &lt;launching&gt; /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --no-sandbox --disable-gpu --disable-extensions --user-data-dir=/tmp/playwright_chromiumdev_profile-Q0ZiMM --remote-debugging-pipe --no-startup-window
+- &lt;launched&gt; pid=8281
+- [pid=8281][err] [8281:8281:0814/115754.071613:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY
+- [pid=8281][err] [8281:8281:0814/115754.071648:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.
+
+com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+com.microsoft.playwright.impl.BrowserTypeImpl.launchImpl(BrowserTypeImpl.java:51)
+com.microsoft.playwright.impl.BrowserTypeImpl.lambda$launch$0(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:43)
+com.microsoft.playwright.impl.BrowserTypeImpl.launch(BrowserTypeImpl.java:36)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.lambda$static$1(PlaywrightCucumberFixtures.java:19)
+com.playwright.toolshop.cucumber.stepdefinitions.PlaywrightCucumberFixtures.setUp(PlaywrightCucumberFixtures.java:32)
+</system-err></testcase></testsuite>
