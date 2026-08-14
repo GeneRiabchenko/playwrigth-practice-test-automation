@@ -7,6 +7,7 @@ import com.playwright.toolshop.fixtures.BaseTestRunner;
 import com.playwright.toolshop.pages.LoginPage;
 import com.playwright.toolshop.utils.User;
 import com.playwright.toolshop.utils.UserAPIClient;
+import com.playwright.toolshop.utils.UserBuilder;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
@@ -32,7 +33,7 @@ public class LoginPageTests extends BaseTestRunner {
 
     @Test
     void invalidUserShouldNotBeLoggedIn(){
-        User randomUser = User.randomUser();
+        User randomUser = UserBuilder.aUser().build();
 
         loginPage.loginAs(randomUser);
         Assertions.assertThat(loginPage.loginError()).isEqualTo("Invalid email or password");
@@ -54,7 +55,7 @@ public class LoginPageTests extends BaseTestRunner {
 
     @Test
     void newValidUserShouldNotBeLoggedIn(){
-        User validUser = User.randomUser();
+        User validUser = UserBuilder.aUser().build();
         userAPIClient.createUserViaAPI(validUser);
         loginPage.loginAs(validUser);
         Assertions.assertThat(loginPage.title()).isEqualTo("My account");

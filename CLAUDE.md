@@ -60,7 +60,7 @@ Parallel execution is enabled for both JUnit (`junit-platform.properties`, fixed
 
 **Utilities** (`utils/`, `testresources/`):
 - `Resources` centralizes shared constants: base URLs, browser launch args, expected product-name fixtures used by multiple tests, and hardcoded credentials/paths (note: `SAMPLE_FILE_URI` is a hardcoded absolute Windows path).
-- `User`, `Address`, `ProductSummary` are simple data records/POJOs; `User.randomUser()` uses `datafaker` for fake test data.
+- `User`, `Address`, `ProductSummary` are simple data records/POJOs; `UserBuilder` (fluent builder, `datafaker`-backed defaults, `aUser()`/`from(User)` entry points) is the preferred way to construct `User` test data.
 - `UserAPIClient` registers a new user directly through the API (bypassing the UI) for test setup.
 - `MockAPI` wraps `page.route(...)` to stub network responses; combined with fixtures in `testresources/data/mocks/` (e.g. `ProductsMock`) for deterministic UI tests against mocked API responses.
 

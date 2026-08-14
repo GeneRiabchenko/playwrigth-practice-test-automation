@@ -1,12 +1,5 @@
 package com.playwright.toolshop.utils;
 
-import net.datafaker.Faker;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
-import static com.playwright.toolshop.testresources.Resources.USER_PASSWORD;
-
 /*
 {
         "first_name": "John",
@@ -34,38 +27,4 @@ public record User(
         String dob,
         String password,
         String email
-) {
-    public static User randomUser(){
-        Faker fake = new Faker();
-        int year = fake.number().numberBetween(1970, 2008);
-        int month = fake.number().numberBetween(1, 12);
-        int day = fake.number().numberBetween(1, 28);
-        LocalDate date = LocalDate.of(year, month, day);
-        String formattedDate = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-
-        Address address = Address.randomAddress();
-
-        return new User(
-                fake.name().firstName(),
-                fake.name().lastName(),
-                address,
-                fake.number().digits(10),
-                formattedDate,
-                USER_PASSWORD,
-                fake.internet().emailAddress()
-        );
-    }
-
-    public User withPassword(String password){
-        return new User(
-                this.first_name,
-                this.last_name,
-                this.address,
-                this.phone,
-                this.dob,
-                password,
-                this.email
-        );
-    }
-
-}
+) {}
