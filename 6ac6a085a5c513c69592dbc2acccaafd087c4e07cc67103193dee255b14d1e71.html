@@ -187,7 +187,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Product Catalog","type":"feature","href":"6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-exclamation-triangle-fill error-icon \u0027 title\u003d\u0027ERROR\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e6 scenarios\u003c/span\u003e, \u003cspan class\u003d\u0027feature-count\u0027\u003e8 test cases\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Product Catalog","type":"feature","href":"6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html","nodes":[{"text":"Product catalog","type":"story","href":"2ec99abaef985ab19e5d84ab16b0cb63d34ca49472888f1863dfab67669f59c1.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-exclamation-triangle-fill error-icon \u0027 title\u003d\u0027ERROR\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e7 scenarios\u003c/span\u003e, \u003cspan class\u003d\u0027feature-count\u0027\u003e7 test cases\u003c/span\u003e"]}],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-exclamation-triangle-fill error-icon \u0027 title\u003d\u0027ERROR\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 story\u003c/span\u003e \u003cspan class\u003d\u0027feature-count\u0027\u003e6 scenarios\u003c/span\u003e, \u003cspan class\u003d\u0027feature-count\u0027\u003e8 test cases\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -261,7 +261,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="bi bi-chat-text"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 16-08-2026 10:30</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 16-08-2026 10:32</span>
     <br style="clear:left"/>
 </div>
 
@@ -284,11 +284,6 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="requirementNarrativeTitle">
-                                As a customer,<br />
-I want to easily search, filter, and sort products in the catalog<br />
-So that I can find what I need quickly
-                            </div>
 
                     </div>
                 </div>
@@ -323,525 +318,80 @@ So that I can find what I need quickly
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <!--- TOC --->
-                                                <div id="toc">
-                                                    <h3>Overview</h3>
-                                                    <table class="table" id="toc-table">
-                                                                <tr>
-                                                                    <td class="rule-toc-entry" colspan="2">
-                                                                        <a href="#6e555997-8428-42f7-825c-4f454e574d6c"
-                                                                           title="View scenario details for this rule">
-                                                                            Rule: Customer should be able to search for products by name
-                                                                    </td>
-                                                                </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="scenario-toc-entry">
-                                                                                    <a href="#15eee7636660d1de3226129f8347acc116d0e47d385dabaf2fec0397d51f78d0"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Example: Actor searches for Combination Pliers
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
+                                                <h3>Requirements Overview</h3>
 
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="9e338e8508dfb43647e5f66b3f9e96e340c3a7fe07234a92485b2d20c71ed1b4.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                                            </a>
+                                                <div id="tree"></div>
 
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="9e338e8508dfb43647e5f66b3f9e96e340c3a7fe07234a92485b2d20c71ed1b4.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="scenario-toc-entry">
-                                                                                    <a href="#9f65869e7e7dd30b99244dd285fc833a9f49a1bbe42c30491bf3fa04bb29fc06"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Example: Actor searches for general term
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="ed429d5fdd0c91630a04bed7f80c3621c42358580f7c3c7a4f22fe2313838930.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="ed429d5fdd0c91630a04bed7f80c3621c42358580f7c3c7a4f22fe2313838930.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="scenario-toc-entry">
-                                                                                    <a href="#a4b5bcaff9f949ff3b91a99b062d8d79f228c2b4b985cca90193675e456c9b93"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Example: Actor searches for product that doesn't exist
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="89ba09e88d9276db91c994282d74b6e756638c94142553184200cc4c1032256b.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="89ba09e88d9276db91c994282d74b6e756638c94142553184200cc4c1032256b.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                <tr>
-                                                                    <td class="rule-toc-entry" colspan="2">
-                                                                        <a href="#2d63b0c9-3f41-476f-b9e0-23eb130c741c"
-                                                                           title="View scenario details for this rule">
-                                                                            Rule: Customer should be able to filter by category
-                                                                    </td>
-                                                                </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="scenario-toc-entry">
-                                                                                    <a href="#a22c6b1d797df5b7b025106c7da919adee6cd8b1278e1ffbd9c3c6785660b502"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Example: Actor filters by Hand Tools category
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="1590c679adcf5c622bcf360d6911cd48c37897e3550146511dbbf9fc84672b33.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="1590c679adcf5c622bcf360d6911cd48c37897e3550146511dbbf9fc84672b33.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                <tr>
-                                                                    <td class="rule-toc-entry" colspan="2">
-                                                                        <a href="#99268c37-9e19-4aa2-ab90-a4d1631501ce"
-                                                                           title="View scenario details for this rule">
-                                                                            Rule: Customer should be able to sort product by criteria
-                                                                    </td>
-                                                                </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="scenario-toc-entry">
-                                                                                    <a href="#36b33d5f70d51b0ecc38aa95799b75d390b37482a4e463a25d7d3e0fdd1160f1"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Actor sorts product by Name
-                                                                                    </a>
-                                                                                        (2 examples)
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="cd6044c6b33326df7f6d28a3015aedece2f8a4266f4958e51cdee0c1702837b5.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="cd6044c6b33326df7f6d28a3015aedece2f8a4266f4958e51cdee0c1702837b5.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="scenario-toc-entry">
-                                                                                    <a href="#1b518b3c7ab30b729fbd5688135328c21d04610fa7e8079f22036242e7ea17d9"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Actor sorts product by Price
-                                                                                    </a>
-                                                                                        (2 examples)
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="8f677a0d9fe739c3bdb34946a77bbc3329ce97512a895e1b61ab1cfd1986fba3.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="8f677a0d9fe739c3bdb34946a77bbc3329ce97512a895e1b61ab1cfd1986fba3.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                    </table>
-                                                </div>
-                                                <!--- END OF TOC --->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3>Scenarios</h3>
-
-                                                    <a name="6e555997-8428-42f7-825c-4f454e574d6c"></a>
-                                                        <div class="rule-title">
-                                                            Rule: Customer should be able to search for products by name</div>
-                                                    <p class="rule-tags inline-tag">
-                                                    </p>
-
-
-                                                        <div class="scenario-docs card" id="15eee7636660d1de3226129f8347acc116d0e47d385dabaf2fec0397d51f78d0">
-                                                            <div class="scenario-docs card-header error"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="9e338e8508dfb43647e5f66b3f9e96e340c3a7fe07234a92485b2d20c71ed1b4.html"
-                                                                               title="View test results">Example: Actor searches for Combination Pliers</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                        <p>Given Actor is on the home page</p>
-                                                                        <p>When he searches for &quot;Combination Pliers&quot;</p>
-                                                                        <p>Then the &quot;Combination Pliers&quot; product should be displayed</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="9f65869e7e7dd30b99244dd285fc833a9f49a1bbe42c30491bf3fa04bb29fc06">
-                                                            <div class="scenario-docs card-header error"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="ed429d5fdd0c91630a04bed7f80c3621c42358580f7c3c7a4f22fe2313838930.html"
-                                                                               title="View test results">Example: Actor searches for general term</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                        <p>Given Actor is on the home page</p>
-                                                                        <p>When he searches for &quot;Pliers&quot;</p>
-                                                                        <p><p>Then the following products are shown:</p>
-<table>
-<thead>
-<tr><th>Product</th><th>Price</th></tr>
-</thead>
-<tbody>
-<tr><td>Combination Pliers</td><td>$14.15</td></tr>
-<tr><td>Pliers</td><td>$12.01</td></tr>
-<tr><td>Long Nose Pliers</td><td>$14.24</td></tr>
-<tr><td>Slip Joint Pliers</td><td>$9.17</td></tr>
-</tbody>
-</table>
-</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="a4b5bcaff9f949ff3b91a99b062d8d79f228c2b4b985cca90193675e456c9b93">
-                                                            <div class="scenario-docs card-header error"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="89ba09e88d9276db91c994282d74b6e756638c94142553184200cc4c1032256b.html"
-                                                                               title="View test results">Example: Actor searches for product that doesn't exist</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                        <p>Given Actor is on the home page</p>
-                                                                        <p>When he searches for &quot;Product-does-not-exist&quot;</p>
-                                                                        <p>Then no products should be displayed</p>
-                                                                        <p>And the message &quot;There are no products found.&quot; should be displayed</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    <a name="2d63b0c9-3f41-476f-b9e0-23eb130c741c"></a>
-                                                        <div class="rule-title">
-                                                            Rule: Customer should be able to filter by category</div>
-                                                    <p class="rule-tags inline-tag">
-                                                    </p>
-
-
-                                                        <div class="scenario-docs card" id="a22c6b1d797df5b7b025106c7da919adee6cd8b1278e1ffbd9c3c6785660b502">
-                                                            <div class="scenario-docs card-header error"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="1590c679adcf5c622bcf360d6911cd48c37897e3550146511dbbf9fc84672b33.html"
-                                                                               title="View test results">Example: Actor filters by Hand Tools category</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                        <p>Given Actor is on the home page</p>
-                                                                        <p><p>When Actor selects following categories:</p>
-<table>
-<thead></thead>
-<tbody>
-<tr><td>Hand Saw</td></tr>
-<tr><td>Hammer</td></tr>
-</tbody>
-</table>
-</p>
-                                                                        <p><p>Then the following products are shown:</p>
-<table>
-<thead>
-<tr><th>Product</th><th>Price</th></tr>
-</thead>
-<tbody>
-<tr><td>Claw Hammer with Shock Reduction Grip</td><td>$13.41</td></tr>
-<tr><td>Hammer</td><td>$12.58</td></tr>
-<tr><td>Claw Hammer</td><td>$11.48</td></tr>
-<tr><td>Thor Hammer</td><td>$11.14</td></tr>
-<tr><td>Sledgehammer</td><td>$17.75</td></tr>
-<tr><td>Claw Hammer with Fiberglass Handle</td><td>$20.14</td></tr>
-<tr><td>Court Hammer</td><td>$18.63</td></tr>
-<tr><td>Wood Saw</td><td>$12.18</td></tr>
-</tbody>
-</table>
-</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    <a name="99268c37-9e19-4aa2-ab90-a4d1631501ce"></a>
-                                                        <div class="rule-title">
-                                                            Rule: Customer should be able to sort product by criteria</div>
-                                                    <p class="rule-tags inline-tag">
-                                                    </p>
-
-
-                                                        <div class="scenario-docs card" id="36b33d5f70d51b0ecc38aa95799b75d390b37482a4e463a25d7d3e0fdd1160f1">
-                                                            <div class="scenario-docs card-header error"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="cd6044c6b33326df7f6d28a3015aedece2f8a4266f4958e51cdee0c1702837b5.html"
-                                                                               title="View test results">Scenario Outline: Actor sorts product by Name</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                        <p class="failing-step">Given Actor is on the home page</p>
-                                                                        <p>When Actor sorts by &quot;{Sorting}&quot;</p>
-                                                                        <p><p>Then the following product name are shown:</p>
-<table>
-<thead></thead>
-<tbody>
-<tr><td>{product1}</td></tr>
-<tr><td>{product2}</td></tr>
-<tr><td>{product3}</td></tr>
-<tr><td>{product4}</td></tr>
-<tr><td>{product5}</td></tr>
-<tr><td>{product6}</td></tr>
-<tr><td>{product7}</td></tr>
-<tr><td>{product8}</td></tr>
-<tr><td>{product9}</td></tr>
-</tbody>
-</table>
-</p>
-                                                                <div class="examples">
-                                                                        <p><p>Examples:</p>
-<blockquote>
-</blockquote>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>Sorting</th><th>product1</th><th>product2</th><th>product3</th><th>product4</th><th>product5</th><th>product6</th><th>product7</th><th>product8</th><th>product9</th><th> </th></tr>
-</thead>
-<tbody>
-<tr><td>Name (A - Z)</td><td>Adjustable Wrench</td><td>Angled Spanner</td><td>Belt Sander</td><td>Bolt Cutters</td><td>Chisels Set</td><td>Circular Saw</td><td>Claw Hammer</td><td>Claw Hammer with Fiberglass Handle</td><td>Claw Hammer with Shock Reduction Grip</td><td><a href='cd6044c6b33326df7f6d28a3015aedece2f8a4266f4958e51cdee0c1702837b5.html#beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a></td></tr>
-<tr><td>Name (Z - A)</td><td>Wood Saw</td><td>Wood Carving Chisels</td><td>Washers</td><td>Tool Cabinet</td><td>Thor Hammer</td><td>Tape Measure 7.5m</td><td>Tape Measure 5m</td><td>Swiss Woodcarving Chisels</td><td>Super-thin Protection Gloves</td><td><a href='cd6044c6b33326df7f6d28a3015aedece2f8a4266f4958e51cdee0c1702837b5.html#beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a></td></tr>
-</tbody>
-</table></div>
-</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="1b518b3c7ab30b729fbd5688135328c21d04610fa7e8079f22036242e7ea17d9">
-                                                            <div class="scenario-docs card-header error"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="8f677a0d9fe739c3bdb34946a77bbc3329ce97512a895e1b61ab1cfd1986fba3.html"
-                                                                               title="View test results">Scenario Outline: Actor sorts product by Price</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                        <p class="failing-step">Given Actor is on the home page</p>
-                                                                        <p>When Actor sorts by &quot;{Sorting}&quot;</p>
-                                                                        <p><p>Then the following product prices are shown:</p>
-<table>
-<thead></thead>
-<tbody>
-<tr><td>{price1}</td></tr>
-<tr><td>{price2}</td></tr>
-<tr><td>{price3}</td></tr>
-<tr><td>{price4}</td></tr>
-<tr><td>{price5}</td></tr>
-<tr><td>{price6}</td></tr>
-<tr><td>{price7}</td></tr>
-<tr><td>{price8}</td></tr>
-<tr><td>{price9}</td></tr>
-</tbody>
-</table>
-</p>
-                                                                <div class="examples">
-                                                                        <p><p>Examples:</p>
-<blockquote>
-</blockquote>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>Sorting</th><th>price1</th><th>price2</th><th>price3</th><th>price4</th><th>price5</th><th>price6</th><th>price7</th><th>price8</th><th>price9</th><th> </th></tr>
-</thead>
-<tbody>
-<tr><td>Price (High - Low)</td><td>$89.55</td><td>$86.71</td><td>$80.19</td><td>$73.59</td><td>$66.54</td><td>$61.16</td><td>$58.48</td><td>$48.41</td><td>$46.50</td><td><a href='8f677a0d9fe739c3bdb34946a77bbc3329ce97512a895e1b61ab1cfd1986fba3.html#beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a></td></tr>
-<tr><td>Price (Low - High)</td><td>$3.55</td><td>$3.95</td><td>$4.65</td><td>$4.92</td><td>$5.55</td><td>$6.25</td><td>$7.23</td><td>$7.99</td><td>$9.17</td><td><a href='8f677a0d9fe739c3bdb34946a77bbc3329ce97512a895e1b61ab1cfd1986fba3.html#beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a></td></tr>
-</tbody>
-</table></div>
-</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                <!-- STATS -->
+    <div>
+        <h3><i class="bi bi-speedometer2"></i> Key Statistics</h3>
+        <div>
+            <table class="table table-striped table-hover">
+                <tbody>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-card-checklist"></i> Number of Scenarios
+                    </td>
+                    <td>17</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-caret-right"></i> Total Number of Test Cases
+                    </td>
+                    <td>19</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-flag-fill"></i> Tests Started
+                    </td>
+                    <td>Aug 16, 2026 10:32:21</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-stop-circle"></i> Tests
+                        Finished
+                    </td>
+                    <td>Aug 16, 2026 10:32:38</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-stopwatch"></i> Total
+                        Duration
+                    </td>
+                    <td>17s</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-trophy"></i> Fastest Test
+                    </td>
+                    <td>2ms</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-skip-start"></i> Slowest
+                        Test
+                    </td>
+                    <td>1s</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-stopwatch"></i> Average
+                        Execution Time
+                    </td>
+                    <td>450ms</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-stopwatch-fill"></i> Cumulative Test Time
+                        <br/><small class="text-muted">(sum of all individual test durations)</small>
+                    </td>
+                    <td>7s</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+                                                <!-- END STATS -->
                                             </div>
                                         </div>
                                     </div>
@@ -892,7 +442,7 @@ So that I can find what I need quickly
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>14s</td>
+                    <td>17s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -902,7 +452,7 @@ So that I can find what I need quickly
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>0ms</td>
+                    <td>2ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -919,24 +469,24 @@ So that I can find what I need quickly
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Aug 16, 2026 10:30:40</td>
+                    <td>Aug 16, 2026 10:32:21</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>422ms</td>
+                    <td>450ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Aug 16, 2026 10:30:54</td>
+                    <td>Aug 16, 2026 10:32:38</td>
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Cumulative Test Time
                         <br/><small class="text-muted">(sum of all individual test durations)</small>
                     </td>
-                    <td>6s</td>
+                    <td>7s</td>
                 </tr>
                 </tbody>
             </table>
@@ -958,81 +508,123 @@ So that I can find what I need quickly
                                                         </tr>
                                                         </thead>
                                                         <tbody>
+                                                                <tr class="scenario-result IGNORED">
+                                                                    <td>
+                                                                            <a href="#">Product Catalog</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="d3194a0cd726ea91e6a2fc27c945fdd4ab0b629ea879bbf74a5782204a453d8e.html">Wait for API response</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:21</td>
+                                                                    <td>002ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">IGNORED</span> <a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
+                                                                    </td>
+                                                                </tr>
                                                                 <tr class="scenario-result ERROR">
                                                                     <td>
-                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                            <a href="2ec99abaef985ab19e5d84ab16b0cb63d34ca49472888f1863dfab67669f59c1.html">ProductCatalog</a>
                                                                     </td>
                                                                     <td>
-                                                                            <a href="9e338e8508dfb43647e5f66b3f9e96e340c3a7fe07234a92485b2d20c71ed1b4.html">Actor searches for Combination Pliers</a>
+                                                                            <a href="43e60d4224e848fc89bb1682f5814a765b4c85fa6ec4440c038351e436e38787.html">Correct title should be shown on the main page</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'></span><span style="display:none"></span>
+                                                                    <td><span style="display:none"></span>
                                                                     </td>
-                                                                    <td>3</td>
-                                                                    <td>10:30:53</td>
-                                                                    <td>184ms</td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:32</td>
+                                                                    <td>356ms</td>
                                                                     <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="scenario-result ERROR">
                                                                     <td>
-                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                            <a href="2ec99abaef985ab19e5d84ab16b0cb63d34ca49472888f1863dfab67669f59c1.html">ProductCatalog</a>
                                                                     </td>
                                                                     <td>
-                                                                            <a href="ed429d5fdd0c91630a04bed7f80c3621c42358580f7c3c7a4f22fe2313838930.html">Actor searches for general term</a>
+                                                                            <a href="eaf5f72a8a63b53d06fc9af3c8639521edfb71ea55295fc60256d26889d5034e.html">Check related products</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'></span><span style="display:none"></span>
+                                                                    <td><span style="display:none"></span>
                                                                     </td>
-                                                                    <td>3</td>
-                                                                    <td>10:30:54</td>
-                                                                    <td>143ms</td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:32</td>
+                                                                    <td>438ms</td>
                                                                     <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="scenario-result ERROR">
                                                                     <td>
-                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                            <a href="2ec99abaef985ab19e5d84ab16b0cb63d34ca49472888f1863dfab67669f59c1.html">ProductCatalog</a>
                                                                     </td>
                                                                     <td>
-                                                                            <a href="89ba09e88d9276db91c994282d74b6e756638c94142553184200cc4c1032256b.html">Actor searches for product that doesn't exist</a>
+                                                                            <a href="b23a21cb4d506789e5a77fa160de6811f52f0e4c7d0f54f310df83613aa6d513.html">Product images with titles should be shown</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'></span><span style="display:none"></span>
+                                                                    <td><span style="display:none"></span>
                                                                     </td>
-                                                                    <td>4</td>
-                                                                    <td>10:30:53</td>
-                                                                    <td>519ms</td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:33</td>
+                                                                    <td>569ms</td>
                                                                     <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="scenario-result ERROR">
                                                                     <td>
-                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                            <a href="2ec99abaef985ab19e5d84ab16b0cb63d34ca49472888f1863dfab67669f59c1.html">ProductCatalog</a>
                                                                     </td>
                                                                     <td>
-                                                                            <a href="1590c679adcf5c622bcf360d6911cd48c37897e3550146511dbbf9fc84672b33.html">Actor filters by Hand Tools category</a>
+                                                                            <a href="2f5cbbbef0638b7b281bc326e2402d41a8e64d1081b97f85d2957185987e994f.html">Out of stock products should not be filtered by search</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'></span><span style="display:none"></span>
+                                                                    <td><span style="display:none"></span>
                                                                     </td>
-                                                                    <td>3</td>
-                                                                    <td>10:30:53</td>
-                                                                    <td>546ms</td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:33</td>
+                                                                    <td>430ms</td>
                                                                     <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="scenario-result ERROR">
                                                                     <td>
-                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                            <a href="2ec99abaef985ab19e5d84ab16b0cb63d34ca49472888f1863dfab67669f59c1.html">ProductCatalog</a>
                                                                     </td>
                                                                     <td>
-                                                                        <i class="bi bi-table" title="Data Driven Scenario"> <a href="cd6044c6b33326df7f6d28a3015aedece2f8a4266f4958e51cdee0c1702837b5.html">Actor sorts product by Name</a>
-                                                                            <br/>
-                                                                                <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> 2 broken test cases
-                                                                                <br/>
+                                                                            <a href="83de03eee9bae62c7176516955da320948c4c352ba2761793bf5a19cb7f457d9.html">Clicking on Page logo redirects to main page</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'></span><span style="display:none"></span>
+                                                                    <td><span style="display:none"></span>
                                                                     </td>
-                                                                    <td>3</td>
-                                                                    <td>10:30:53</td>
-                                                                    <td>746ms</td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:34</td>
+                                                                    <td>508ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="2ec99abaef985ab19e5d84ab16b0cb63d34ca49472888f1863dfab67669f59c1.html">ProductCatalog</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="5a7752d916069f64a1ddabac3dfe789399108dcc9ffee13071369d996c26e8cc.html">Out of stock products should not be filtered by search</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:34</td>
+                                                                    <td>357ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="2ec99abaef985ab19e5d84ab16b0cb63d34ca49472888f1863dfab67669f59c1.html">ProductCatalog</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="8d06a07227bc89a4a628464a19255bbd969fa9e8ea642147e8051d6c21220cac.html">Correct searched products should be shown</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:35</td>
+                                                                    <td>316ms</td>
                                                                     <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
                                                                     </td>
                                                                 </tr>
@@ -1046,11 +638,134 @@ So that I can find what I need quickly
                                                                                 <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> 2 broken test cases
                                                                                 <br/>
                                                                     </td>
-                                                                    <td><span class='context-icon'></span><span style="display:none"></span>
+                                                                    <td><span style="display:none"></span>
                                                                     </td>
                                                                     <td>3</td>
-                                                                    <td>10:30:53</td>
-                                                                    <td>1s 306ms</td>
+                                                                    <td>10:32:37</td>
+                                                                    <td>1s 465ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="89ba09e88d9276db91c994282d74b6e756638c94142553184200cc4c1032256b.html">Actor searches for product that doesn't exist</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>4</td>
+                                                                    <td>10:32:38</td>
+                                                                    <td>262ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <i class="bi bi-table" title="Data Driven Scenario"> <a href="cd6044c6b33326df7f6d28a3015aedece2f8a4266f4958e51cdee0c1702837b5.html">Actor sorts product by Name</a>
+                                                                            <br/>
+                                                                                <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> 2 broken test cases
+                                                                                <br/>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>3</td>
+                                                                    <td>10:32:38</td>
+                                                                    <td>610ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="ed429d5fdd0c91630a04bed7f80c3621c42358580f7c3c7a4f22fe2313838930.html">Actor searches for general term</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>3</td>
+                                                                    <td>10:32:38</td>
+                                                                    <td>236ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="9e338e8508dfb43647e5f66b3f9e96e340c3a7fe07234a92485b2d20c71ed1b4.html">Actor searches for Combination Pliers</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>3</td>
+                                                                    <td>10:32:38</td>
+                                                                    <td>224ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="6ac6a085a5c513c69592dbc2acccaafd087c4e07cc67103193dee255b14d1e71.html">Product Catalog</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="1590c679adcf5c622bcf360d6911cd48c37897e3550146511dbbf9fc84672b33.html">Actor filters by Hand Tools category</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>3</td>
+                                                                    <td>10:32:38</td>
+                                                                    <td>203ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="e0b6d99b02169c20360e3125d9207ab55cb6fb88f139facd1340cfc6e4cf8f28.html">ProductPageTests</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="8532b00cf901444d3126eff4551bbebceed16591b6db85bc9037ea2777006027.html">Product specifications should match</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:34</td>
+                                                                    <td>443ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="92a54067f02f20eb61edd1d1ba83c5f35c4921ed7ff866eacbe6504c582ca4d8.html">SearchTests</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="639417fb057e327697408e4eee11b5fa8f7f8a2bac6382be5ae41348fcbecda6.html">Search does not work when empty</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:31</td>
+                                                                    <td>466ms</td>
+                                                                    <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="92a54067f02f20eb61edd1d1ba83c5f35c4921ed7ff866eacbe6504c582ca4d8.html">SearchTests</a>
+                                                                    </td>
+                                                                    <td>
+                                                                            <a href="a2ad938245d87a714d9885a8273276b96b3853805431d194374098fa8e3c5013.html">Check that no results are shown when search doesn't match with any product</a>
+                                                                    </td>
+                                                                    <td><span style="display:none"></span>
+                                                                    </td>
+                                                                    <td>0</td>
+                                                                    <td>10:32:31</td>
+                                                                    <td>410ms</td>
                                                                     <td class="test-result-cell"><span style="display:none">ERROR</span> <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
                                                                     </td>
                                                                 </tr>
