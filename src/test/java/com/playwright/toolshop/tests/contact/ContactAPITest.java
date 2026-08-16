@@ -26,6 +26,7 @@ import static com.playwright.toolshop.testresources.Resources.BASE_API_URL;
 @ExtendWith(SerenityJUnit5Extension.class)
 @ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright
+@Feature("Registration")
 public class ContactAPITest {
     private APIRequestContext request;
 
@@ -44,8 +45,7 @@ public class ContactAPITest {
         }
     }
 
-    @Story("Contact EPIC")
-    @Feature("Creating new user api")
+    @Story("Creating a user via the API")
     @Test
     @DisplayName("Valid user should be created via API")
     void validUserIsCreated(){
@@ -74,8 +74,7 @@ public class ContactAPITest {
 
     }
 
-    @Story("Contact EPIC")
-    @Feature("Creating new user API")
+    @Story("Required field validation via the API")
     @Test
     @DisplayName("First name field is mandatory for user creation via API")
     void firstNameIsMandatory(){

@@ -7,6 +7,7 @@ import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import net.serenitybdd.annotations.Feature;
 import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.annotations.Story;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,6 +32,7 @@ public class SearchTests extends BaseTestRunner {
     }
 
     @Feature("Product Catalog")
+    @Story("Searching for products")
     @Test
     public void searchDoesNotWorkWhenEmpty(){
         leftNavigationPage.search("");
@@ -38,6 +40,7 @@ public class SearchTests extends BaseTestRunner {
     }
 
     @Feature("Product Catalog")
+    @Story("Searching for products")
     @Test
     @DisplayName("Check that no results are shown when search doesn't match with any product")
     public void noMatchesTest(){
@@ -50,6 +53,7 @@ public class SearchTests extends BaseTestRunner {
     }
 
     @Feature("Filter")
+    @Story("Clearing search results")
     @Test
     @DisplayName("Cross button should clear search results")
     void crossButtonClearsSearchResult() {
