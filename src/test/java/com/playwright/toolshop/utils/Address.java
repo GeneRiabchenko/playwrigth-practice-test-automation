@@ -2,6 +2,8 @@ package com.playwright.toolshop.utils;
 
 import net.datafaker.Faker;
 
+import static com.playwright.toolshop.testresources.Resources.DEFAULT_COUNTRY;
+
 /*
 "address": {
             "street": "Street 1",
@@ -28,9 +30,33 @@ public record Address(
                 fake.address().buildingNumber(),
                 fake.address().city(),
                 fake.address().state(),
-                fake.address().country(),
+                DEFAULT_COUNTRY,
                 fake.address().postcode()
         );
+    }
+
+    public Address withStreet(String street){
+        return new Address(street, house_number, city, state, country, postal_code);
+    }
+
+    public Address withHouseNumber(String house_number){
+        return new Address(street, house_number, city, state, country, postal_code);
+    }
+
+    public Address withCity(String city){
+        return new Address(street, house_number, city, state, country, postal_code);
+    }
+
+    public Address withState(String state){
+        return new Address(street, house_number, city, state, country, postal_code);
+    }
+
+    public Address withCountry(String country){
+        return new Address(street, house_number, city, state, country, postal_code);
+    }
+
+    public Address withPostalCode(String postal_code){
+        return new Address(street, house_number, city, state, country, postal_code);
     }
 }
 

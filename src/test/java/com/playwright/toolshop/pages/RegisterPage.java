@@ -84,6 +84,7 @@ public class RegisterPage extends BasePage {
         FIRST_NAME_FIELD.fill(user.first_name());
         LAST_NAME_FIELD.fill(user.last_name());
         DOB_FIELD.fill(user.dob());
+        selectCountry(user.address().country());
         POSTCODE_FIELD.fill(user.address().postal_code());
         HOUSE_NUMBER_FIELD.fill(user.address().house_number());
         STREET_FIELD.fill(user.address().street());

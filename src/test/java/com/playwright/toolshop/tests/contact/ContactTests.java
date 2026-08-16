@@ -23,6 +23,7 @@ import static com.playwright.toolshop.testresources.Resources.SAMPLE_FILE_URI;
 @ExtendWith(SerenityJUnit5Extension.class)
 @ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright(HeadlessChromeOptions.class)
+@Feature("Contact")
 public class ContactTests extends BaseTestRunner {
     @Steps
     ContactPage contactPage;
@@ -32,8 +33,7 @@ public class ContactTests extends BaseTestRunner {
         contactPage.goToContactPage();
     }
 
-    @Story("Contact EPIC")
-    @Feature("Creating new user web")
+    @Story("Submitting a contact request")
     @Test
     @DisplayName("Send contact request")
     void sendContactRequest() {
@@ -47,8 +47,7 @@ public class ContactTests extends BaseTestRunner {
         contactPage.clickSend();
     }
 
-    @Story("Contact EPIC")
-    @Feature("Contacts")
+    @Story("Contact form validation")
     @Test
     @DisplayName("Check contact request validations")
     void checkContactPageErrorMessages(){

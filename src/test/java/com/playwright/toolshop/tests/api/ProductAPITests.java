@@ -11,7 +11,9 @@ import com.playwright.toolshop.fixtures.BaseAPITestRunner;
 import com.playwright.toolshop.pages.LeftNavigationPage;
 import com.playwright.toolshop.pages.MainPage;
 import com.playwright.toolshop.utils.MockAPI;
+import net.serenitybdd.annotations.Feature;
 import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.annotations.Story;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.playwright.PlaywrightSerenity;
 import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
@@ -33,6 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(SerenityJUnit5Extension.class)
 @ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright(HeadlessChromeOptions.class)
+@Feature("Product API")
 public class ProductAPITests extends BaseAPITestRunner {
 
     @Steps
@@ -54,6 +57,7 @@ public class ProductAPITests extends BaseAPITestRunner {
         PlaywrightSerenity.registerPage(page);
     }
 
+    @Story("Verifying product data via the API")
     @DisplayName("Checking price and name in the API")
     @ParameterizedTest(name = "Checking product {0}")
     @MethodSource("products")
@@ -63,6 +67,7 @@ public class ProductAPITests extends BaseAPITestRunner {
         mainPage.isFilteredProductByNameAndPriceVisible(product.name, product.price, true);
     }
 
+    @Story("Sorting products (mocked API)")
     @Test
     @DisplayName("Mock product request")
     void mockedResponseSortedAZ() {

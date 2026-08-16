@@ -21,7 +21,7 @@ public class UserBuilder {
         this.first_name = fake.name().firstName();
         this.last_name = fake.name().lastName();
         this.address = Address.randomAddress();
-        this.phone = fake.phoneNumber().cellPhone();
+        this.phone = fake.number().digits(10);
         this.dob = randomDob(fake);
         this.password = USER_PASSWORD;
         this.email = fake.internet().emailAddress();

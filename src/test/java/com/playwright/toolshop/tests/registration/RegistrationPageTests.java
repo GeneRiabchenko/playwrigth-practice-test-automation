@@ -7,8 +7,10 @@ import com.playwright.toolshop.fixtures.BaseTestRunner;
 import com.playwright.toolshop.pages.RegisterPage;
 import com.playwright.toolshop.utils.User;
 import com.playwright.toolshop.utils.UserAPIClient;
+import com.playwright.toolshop.utils.UserBuilder;
 import net.serenitybdd.annotations.Feature;
 import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.annotations.Story;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.playwright.junit5.SerenityPlaywrightExtension;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,6 +26,7 @@ import static com.playwright.toolshop.testresources.Resources.SIGN_IN_URL;
 @ExtendWith(SerenityJUnit5Extension.class)
 @ExtendWith(SerenityPlaywrightExtension.class)
 @UsePlaywright(HeadlessChromeOptions.class)
+@Feature("Registration")
 public class RegistrationPageTests extends BaseTestRunner {
     @Steps
     RegisterPage registerPage;
@@ -37,16 +40,15 @@ public class RegistrationPageTests extends BaseTestRunner {
     }
 
     @Nested
-    @Feature("Registration")
+    @Story("Registering a new user")
     class SuccessfulRegistration {
 
         @Test
         @DisplayName("Registering with valid details should redirect to the login page")
         void validUserShouldBeRegistered() {
-            User newUser = User.randomUser();
+            User newUser = UserBuilder.aUser().build();
 
             registerPage.fillForm(newUser);
-            registerPage.selectCountry("United States of America (the)");
             registerPage.clickRegister();
             registerPage.waitForRedirectToLogin();
 
@@ -55,7 +57,7 @@ public class RegistrationPageTests extends BaseTestRunner {
     }
 
     @Nested
-    @Feature("Registration")
+    @Story("Phone number validation")
     class PhoneNumberValidation {
 
         @ParameterizedTest(name = "Phone number {0} should be rejected")
@@ -68,10 +70,9 @@ public class RegistrationPageTests extends BaseTestRunner {
         })
         @DisplayName("Formatted phone numbers should be rejected")
         void formattedPhoneNumberShouldBeRejected(String phone) {
-            User newUser = User.randomUser();
+            User newUser = UserBuilder.aUser().build();
 
             registerPage.fillForm(newUser);
-            registerPage.selectCountry("United States of America (the)");
             registerPage.fillPhone(phone);
             registerPage.clickRegister();
 
@@ -80,7 +81,7 @@ public class RegistrationPageTests extends BaseTestRunner {
     }
 
     @Nested
-    @Feature("Registration")
+    @Story("Required field validation")
     class RequiredFieldValidation {
 
         @Test
@@ -104,16 +105,15 @@ public class RegistrationPageTests extends BaseTestRunner {
     }
 
     @Nested
-    @Feature("Registration")
+    @Story("Email validation")
     class EmailValidation {
 
         @Test
         @DisplayName("An invalid email format should be rejected")
         void invalidEmailFormatShouldBeRejected() {
-            User newUser = User.randomUser();
+            User newUser = UserBuilder.aUser().build();
 
             registerPage.fillForm(newUser);
-            registerPage.selectCountry("United States of America (the)");
             registerPage.fillEmail("not-an-email");
             registerPage.clickRegister();
 
@@ -122,16 +122,15 @@ public class RegistrationPageTests extends BaseTestRunner {
     }
 
     @Nested
-    @Feature("Registration")
+    @Story("Password validation")
     class PasswordValidation {
 
         @Test
         @DisplayName("A password shorter than 6 characters should be rejected")
         void tooShortPasswordShouldBeRejected() {
-            User newUser = User.randomUser();
+            User newUser = UserBuilder.aUser().build();
 
             registerPage.fillForm(newUser);
-            registerPage.selectCountry("United States of America (the)");
             registerPage.fillPassword("ab1");
             registerPage.clickRegister();
 
@@ -141,10 +140,9 @@ public class RegistrationPageTests extends BaseTestRunner {
         @Test
         @DisplayName("A password missing required character types should be rejected")
         void weakPasswordMissingComplexityShouldBeRejected() {
-            User newUser = User.randomUser();
+            User newUser = UserBuilder.aUser().build();
 
             registerPage.fillForm(newUser);
-            registerPage.selectCountry("United States of America (the)");
             registerPage.fillPassword("password123");
             registerPage.clickRegister();
 
@@ -153,18 +151,17 @@ public class RegistrationPageTests extends BaseTestRunner {
     }
 
     @Nested
-    @Feature("Registration")
+    @Story("Duplicate email validation")
     class DuplicateEmailValidation {
 
         @Test
         @DisplayName("Registering with an already registered email should show an error")
         void duplicateEmailShouldBeRejected() {
-            User existingUser = User.randomUser();
+            User existingUser = UserBuilder.aUser().build();
             userAPIClient.createUserViaAPI(existingUser);
 
-            User newUser = User.randomUser();
+            User newUser = UserBuilder.aUser().build();
             registerPage.fillForm(newUser);
-            registerPage.selectCountry("United States of America (the)");
             registerPage.fillEmail(existingUser.email());
             registerPage.clickRegister();
 
