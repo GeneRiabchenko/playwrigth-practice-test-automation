@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.playwright.toolshop.tests.contact.ContactAPITest" skipped="0" tests="1" time="3.2" timestamp="2026-08-14 11:57:48"><testcase classname="com.playwright.toolshop.tests.contact.ContactAPITest" name="Valid user should be created via API"/></testsuite>
